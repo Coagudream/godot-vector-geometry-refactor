@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmdbjme6hmkie"]
+
+[ext_resource type="Script" uid="uid://cfw60hw0hchv3" path="res://实体/指针/Printer.gd" id="1_vthy7"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wrmpo"]
+b = Vector2(0, 0)
+
+[node name="Ptinter" type="Line2D"]
+texture_filter = 1
+texture_repeat = 2
+points = PackedVector2Array(0, 0, 50, 0)
+width = 6.0
+texture_mode = 1
+antialiased = true
+script = ExtResource("1_vthy7")
+
+[node name="LineArea" type="Area2D" parent="."]
+collision_layer = 512
+collision_mask = 139
+
+[node name="LineCollision" type="CollisionShape2D" parent="LineArea"]
+shape = SubResource("SegmentShape2D_wrmpo")

@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbvsomq2kho6v"]
+
+[ext_resource type="Texture2D" uid="uid://c2db2thrc0tyv" path="res://icon.svg" id="1_d7b3f"]
+[ext_resource type="Script" uid="uid://cr8n4ay56jxha" path="res://实体/敌人/enemy.gd" id="2_edu4g"]
+[ext_resource type="Resource" uid="uid://c7e55jkwv8hls" path="res://实体/敌人/text.tres" id="2_u7eiv"]
+[ext_resource type="Script" uid="uid://bvf6u5dqlh61t" path="res://通用/系统/受击系统/受击框/hitbox.gd" id="3_u7eiv"]
+[ext_resource type="Script" uid="uid://dad657qecdfxf" path="res://通用/系统/受击系统/攻击框/hurtbox.gd" id="5_u7eiv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d7b3f"]
+radius = 55.0364
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
+size = Vector2(128, 130)
+
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 8
+collision_mask = 269
+collision_priority = 0.5
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("2_edu4g")
+enemy = ExtResource("2_u7eiv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_d7b3f")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_d7b3f")
+
+[node name="Hitbox" type="Area2D" parent="." node_paths=PackedStringArray("target")]
+collision_layer = 128
+collision_mask = 16
+monitoring = false
+script = ExtResource("3_u7eiv")
+target = NodePath("..")
+metadata/_custom_type_script = "uid://bvf6u5dqlh61t"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_aqk2v")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 1056
+monitorable = false
+script = ExtResource("5_u7eiv")
+metadata/_custom_type_script = "uid://dad657qecdfxf"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(2, -2)
+shape = SubResource("RectangleShape2D_aqk2v")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -25.0
+offset_top = -98.0
+offset_right = 28.0
+offset_bottom = -71.0
+metadata/_edit_use_anchors_ = true

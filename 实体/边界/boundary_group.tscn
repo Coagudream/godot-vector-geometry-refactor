@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=3 uid="uid://b02qkgrdocqhs"]
+
+[ext_resource type="Script" uid="uid://x1k8yndwm3i8" path="res://战斗场/boundary_manager.gd" id="1_j10k6"]
+[ext_resource type="PackedScene" uid="uid://casm63lhbsc77" path="res://实体/边界/boundary.tscn" id="2_0vcwo"]
+[ext_resource type="Shader" uid="uid://cb46y08m3qb8a" path="res://着色/线条滚动/scrolling_line.gdshader" id="3_0vcwo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5hfi"]
+resource_local_to_scene = true
+size = Vector2(6311, 100)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dnn0p"]
+resource_local_to_scene = true
+shader = ExtResource("3_0vcwo")
+shader_parameter/color_one = Color(1, 1, 1, 1)
+shader_parameter/color_two = Color(0, 0, 0, 1)
+shader_parameter/angle = 89.0
+shader_parameter/line_count = 1000.0
+shader_parameter/speed = 10.0
+shader_parameter/blur = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktr34"]
+resource_local_to_scene = true
+size = Vector2(100, 3749)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hxl6"]
+resource_local_to_scene = true
+size = Vector2(100, 3749)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0j1c"]
+resource_local_to_scene = true
+size = Vector2(6311, 100)
+
+[node name="BoundaryGroup" type="Node2D"]
+script = ExtResource("1_j10k6")
+
+[node name="Down" parent="." node_paths=PackedStringArray("color_rect") instance=ExtResource("2_0vcwo")]
+position = Vector2(0, 1719)
+color_rect = NodePath("DownColor")
+thickness = Vector2(6311, 100)
+
+[node name="Area" parent="Down" index="0"]
+shape = SubResource("RectangleShape2D_t5hfi")
+
+[node name="DownColor" type="ColorRect" parent="Down"]
+material = SubResource("ShaderMaterial_dnn0p")
+offset_left = -3155.5
+offset_top = -50.0
+offset_right = 3155.5
+offset_bottom = 50.0
+
+[node name="Left" parent="." instance=ExtResource("2_0vcwo")]
+position = Vector2(-3000, 0)
+thickness = Vector2(100, 3749)
+
+[node name="Area" parent="Left" index="0"]
+shape = SubResource("RectangleShape2D_ktr34")
+
+[node name="LeftColor" type="ColorRect" parent="Left"]
+material = SubResource("ShaderMaterial_dnn0p")
+offset_left = 50.0
+offset_top = -3156.0
+offset_right = 6361.0
+offset_bottom = -3056.0
+rotation = 1.5708
+
+[node name="Right" parent="." instance=ExtResource("2_0vcwo")]
+position = Vector2(3000, 0)
+thickness = Vector2(100, 3749)
+
+[node name="Area" parent="Right" index="0"]
+shape = SubResource("RectangleShape2D_8hxl6")
+
+[node name="RightColor" type="ColorRect" parent="Right"]
+material = SubResource("ShaderMaterial_dnn0p")
+offset_left = 50.0
+offset_top = -3205.0
+offset_right = 6361.0
+offset_bottom = -3105.0
+rotation = 1.5708
+
+[node name="Up" parent="." node_paths=PackedStringArray("color_rect") instance=ExtResource("2_0vcwo")]
+position = Vector2(0, -1719)
+color_rect = NodePath("UpColor")
+thickness = Vector2(6311, 100)
+
+[node name="Area" parent="Up" index="0"]
+shape = SubResource("RectangleShape2D_q0j1c")
+
+[node name="UpColor" type="ColorRect" parent="Up"]
+material = SubResource("ShaderMaterial_dnn0p")
+offset_left = -3155.5
+offset_top = -50.0
+offset_right = 3155.5
+offset_bottom = 50.0
+
+[editable path="Down"]
+[editable path="Left"]
+[editable path="Right"]
+[editable path="Up"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://32a7581xdoh5"]
+
+[ext_resource type="Shader" uid="uid://d3pek2ovxq35v" path="res://着色/fluctuate.gdshader" id="1_gr5iy"]
+[ext_resource type="Script" uid="uid://ddvnmtctm3c16" path="res://着色/color_rect.gd" id="2_r84d0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r84d0"]
+shader = ExtResource("1_gr5iy")
+shader_parameter/resolution = Vector2(0, 0)
+shader_parameter/time = 0.0
+shader_parameter/spacing = 0.0
+shader_parameter/width = 0.0
+shader_parameter/numRings = 0
+shader_parameter/ringColor = Vector3(0, 0, 0)
+shader_parameter/waveAmplitude = 0.0
+shader_parameter/waveFrequency = 0.0
+shader_parameter/center = Vector2(0, 0)
+shader_parameter/global_min = Vector2(0, 0)
+shader_parameter/global_max = Vector2(0, 0)
+
+[node name="ColorRect" type="ColorRect"]
+material = SubResource("ShaderMaterial_r84d0")
+offset_left = -38697.0
+offset_top = -22663.0
+offset_right = 45398.0
+offset_bottom = 16365.0
+script = ExtResource("2_r84d0")

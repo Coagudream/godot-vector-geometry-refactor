@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvixrimrafj6m"]
+
+[ext_resource type="Script" uid="uid://ci0v1rrpukq1e" path="res://通用/系统/武器系统/武器类/weapon.gd" id="1_prd17"]
+[ext_resource type="Script" uid="uid://dad657qecdfxf" path="res://通用/系统/受击系统/攻击框/hurtbox.gd" id="2_crqr4"]
+
+[node name="Weapon" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_prd17")
+
+[node name="Group" type="Node2D" parent="."]
+
+[node name="Hurtbox" type="Area2D" parent="Group"]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("2_crqr4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Group/Hurtbox"]
+
+[node name="BulletCollision" type="CollisionShape2D" parent="."]

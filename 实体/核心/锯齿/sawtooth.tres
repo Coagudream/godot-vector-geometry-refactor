@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bqhgap7b87b4g"]
+
+[ext_resource type="Texture2D" uid="uid://bmnx325tq2jyy" path="res://实体/核心/锯齿/sawtooth.png" id="1_2oq1b"]
+[ext_resource type="Script" uid="uid://n1dle060x4w0" path="res://实体/核心/锯齿/sawtooth.gd" id="1_kly3r"]
+
+[resource]
+script = ExtResource("1_kly3r")
+permanent = true
+anim_name = "sawtooth"
+pointer_icon = ExtResource("1_2oq1b")
+metadata/_custom_type_script = "uid://bnv8a0maexld"

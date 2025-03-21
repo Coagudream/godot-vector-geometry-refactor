@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgkt3w1gxf536"]
+
+[ext_resource type="Texture2D" uid="uid://btt8tqtevy0yl" path="res://实体/指针/方块指针/指针.png" id="1_8atox"]
+
+[node name="Marker2D" type="Marker2D"]
+gizmo_extents = 20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("1_8atox")

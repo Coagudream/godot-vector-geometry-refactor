@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcmw451relojh"]
+
+[ext_resource type="Script" uid="uid://b1c3ejlo2u3tw" path="res://通用/波动外观/水面波动/平滑曲线/smoothed_line.gd" id="1_ur82w"]
+
+[sub_resource type="Curve2D" id="Curve2D_eji1n"]
+
+[node name="SmoothLine" type="Path2D"]
+curve = SubResource("Curve2D_eji1n")
+script = ExtResource("1_ur82w")
+metadata/_custom_type_script = "uid://b1c3ejlo2u3tw"

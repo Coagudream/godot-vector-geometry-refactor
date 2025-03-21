@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyp13dg0dshmd"]
+
+[ext_resource type="PackedScene" uid="uid://bvixrimrafj6m" path="res://通用/系统/武器系统/武器类/weapon.tscn" id="1_mhvxp"]
+[ext_resource type="Script" uid="uid://cv0wh2aukms5d" path="res://实体/子弹/bullet.gd" id="2_s0ku8"]
+[ext_resource type="Texture2D" uid="uid://cexxjgt1rooeo" path="res://实体/子弹/square_bullet.png" id="3_mhvxp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_554hp"]
+radius = 12.0416
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mhvxp"]
+
+[node name="Bullet" instance=ExtResource("1_mhvxp")]
+collision_mask = 1
+script = ExtResource("2_s0ku8")
+init_direction = Vector2(0, 0)
+
+[node name="Group" parent="." index="0"]
+unique_name_in_owner = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Group" index="0"]
+texture_filter = 1
+texture = ExtResource("3_mhvxp")
+
+[node name="Hurtbox" parent="Group" index="1"]
+collision_layer = 16
+collision_mask = 128
+monitorable = false
+
+[node name="CollisionShape2D" parent="Group/Hurtbox" index="0"]
+shape = SubResource("CircleShape2D_554hp")
+
+[node name="BulletCollision" parent="." index="1"]
+shape = SubResource("CircleShape2D_mhvxp")

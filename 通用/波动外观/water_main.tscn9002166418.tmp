@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://3yymk8jbagx2"]
+
+[ext_resource type="Script" uid="uid://dvdwvfh7myf7y" path="res://通用/波动实体/water_main.gd" id="1_op6if"]
+[ext_resource type="Shader" uid="uid://xqepkd1gngje" path="res://通用/波动实体/water_main.gdshader" id="2_cjkgp"]
+[ext_resource type="Script" uid="uid://bnrue64fbio84" path="res://通用/波动实体/text.gd" id="4_qp4gt"]
+[ext_resource type="Script" uid="uid://b1c3ejlo2u3tw" path="res://通用/波动实体/smoothed_line.gd" id="4_u3f4q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qaeg1"]
+shader = ExtResource("2_cjkgp")
+shader_parameter/tint = Color(0.549, 0.903, 0.986, 0.369)
+
+[sub_resource type="Curve2D" id="Curve2D_54gj2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qp4gt"]
+size = Vector2(125, 75)
+
+[node name="WaterMain" type="Node2D"]
+script = ExtResource("1_op6if")
+distance_between_springs = 48
+spring_number = 48
+borad_thickness = 8.0
+
+[node name="WaterPolygon" type="Polygon2D" parent="."]
+top_level = true
+material = SubResource("ShaderMaterial_qaeg1")
+antialiased = true
+
+[node name="WaterBorder" type="Path2D" parent="."]
+curve = SubResource("Curve2D_54gj2")
+script = ExtResource("4_u3f4q")
+metadata/_custom_type_script = "uid://b1c3ejlo2u3tw"
+
+[node name="Text" type="CharacterBody2D" parent="."]
+script = ExtResource("4_qp4gt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text"]
+position = Vector2(-283, -168)
+shape = SubResource("RectangleShape2D_qp4gt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(250, 0)
+zoom = Vector2(0.6, 0.6)

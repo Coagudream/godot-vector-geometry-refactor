@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://shabqrhu7q1q"]
+
+[ext_resource type="PackedScene" uid="uid://dqusnchtc6h8y" path="res://升级选择/玩家升级卡牌/up_card.tscn" id="1_rpo8v"]
+[ext_resource type="Script" uid="uid://b828jq2fdarpu" path="res://升级选择/升级管理器/up_card_manager.gd" id="1_uqjkg"]
+
+[node name="UpCardManager" type="HBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -470.0
+offset_top = -195.0
+offset_right = 438.0
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 35
+script = ExtResource("1_uqjkg")
+
+[node name="UpCard" parent="." instance=ExtResource("1_rpo8v")]
+layout_mode = 2
+
+[node name="UpCard2" parent="." instance=ExtResource("1_rpo8v")]
+layout_mode = 2
+
+[node name="UpCard3" parent="." instance=ExtResource("1_rpo8v")]
+layout_mode = 2

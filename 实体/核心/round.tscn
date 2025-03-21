@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0pe3nyu4b4cw"]
+
+[ext_resource type="Script" uid="uid://di0mm6fp2r3q3" path="res://实体/核心/round.gd" id="1_ihehx"]
+[ext_resource type="Shader" uid="uid://cg5hho432w7rk" path="res://着色/圆/round.gdshader" id="2_54t8e"]
+[ext_resource type="Texture2D" uid="uid://dhvkxsflvfhwx" path="res://实体/核心/基座/Prompt.png" id="3_j8cmo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1xo7i"]
+shader = ExtResource("2_54t8e")
+shader_parameter/ring_radius = 0.37
+shader_parameter/ring_color = Color(1, 1, 1, 1)
+shader_parameter/ring_width = 0.005
+shader_parameter/smooth_factor = 0.003
+
+[node name="Round" type="Node2D"]
+script = ExtResource("1_ihehx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_1xo7i")
+texture = ExtResource("3_j8cmo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_j8cmo")

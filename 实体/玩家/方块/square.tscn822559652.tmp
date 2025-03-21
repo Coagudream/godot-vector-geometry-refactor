@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://ruvl6e23h7xk"]
+
+[ext_resource type="PackedScene" uid="uid://bw5r1by4cl8ll" path="res://实体/玩家/类/player.tscn" id="1_qlu44"]
+[ext_resource type="Script" uid="uid://b73rkjjvr603n" path="res://实体/玩家/方块/square.gd" id="2_76or4"]
+[ext_resource type="Texture2D" uid="uid://cwsy221vrao22" path="res://实体/玩家/方块/Square.png" id="2_arxln"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76or4"]
+size = Vector2(126, 125)
+
+[node name="Square" instance=ExtResource("1_qlu44")]
+script = ExtResource("2_76or4")
+player_property = null
+
+[node name="Sprite2D" parent="Node2D" index="0"]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_arxln")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Hitbox" index="0"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_76or4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_76or4")

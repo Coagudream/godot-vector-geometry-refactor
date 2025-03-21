@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://ruvl6e23h7xk"]
+
+[ext_resource type="PackedScene" uid="uid://bw5r1by4cl8ll" path="res://实体/玩家/类/player.tscn" id="1_qlu44"]
+[ext_resource type="Script" uid="uid://b73rkjjvr603n" path="res://实体/玩家/方块/square.gd" id="2_76or4"]
+[ext_resource type="Resource" uid="uid://d71ix1kakhvx" path="res://实体/玩家/方块/square.tres" id="3_arxln"]
+[ext_resource type="PackedScene" uid="uid://etnd1jjflxeh" path="res://通用/系统/武器系统/远程/发射器/square_fire_point.tscn" id="4_76or4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76or4"]
+size = Vector2(126, 125)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arxln"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[node name="Square" groups=["Player"] instance=ExtResource("1_qlu44")]
+script = ExtResource("2_76or4")
+init_player_property = ExtResource("3_arxln")
+
+[node name="SquareCollision" type="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_76or4")
+
+[node name="Hitbox" parent="Group" index="0" node_paths=PackedStringArray("target")]
+monitoring = false
+target = NodePath("../..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Group/Hitbox" index="0"]
+shape = SubResource("RectangleShape2D_76or4")
+
+[node name="Hurtbox" parent="Group" index="1"]
+unique_name_in_owner = true
+monitorable = false
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Group/Hurtbox" index="0"]
+shape = SubResource("RectangleShape2D_76or4")
+
+[node name="Panel" type="Panel" parent="Group" index="2"]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_arxln")
+
+[node name="SquareFirePoint" parent="." index="2" instance=ExtResource("4_76or4")]
+
+[node name="PlayerCamera" parent="." index="3"]
+physics_interpolation_mode = 1
+zoom = Vector2(0.7, 0.7)
+limit_smoothed = true
+
+[node name="SateMachine" parent="." index="4" node_paths=PackedStringArray("init_state")]
+init_state = NodePath("IDLE")
+
+[node name="Label" type="Label" parent="." index="6"]
+visible = false
+offset_left = -20.0
+offset_top = -99.0
+offset_right = 21.0
+offset_bottom = -76.0
+text = "asdw"

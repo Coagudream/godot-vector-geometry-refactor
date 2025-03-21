@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://etnd1jjflxeh"]
+
+[ext_resource type="Script" uid="uid://ym13sfbwawut" path="res://通用/系统/武器系统/远程/发射器/square_fire_point.gd" id="1_favro"]
+[ext_resource type="Resource" uid="uid://c2nsv8qi4h1ox" path="res://实体/子弹/square_buttle.tres" id="2_eqrx5"]
+[ext_resource type="PackedScene" uid="uid://dgkt3w1gxf536" path="res://通用/系统/武器系统/远程/发射器/marker_2d.tscn" id="3_af2be"]
+[ext_resource type="PackedScene" uid="uid://32a7581xdoh5" path="res://着色/圆环波动/fluctuate.tscn" id="4_6x7n0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0vd0p"]
+radius = 270.0
+
+[node name="SquareFirePoint" type="Node2D"]
+script = ExtResource("1_favro")
+icon_center_radius = 125.0
+detection_radius = 300.0
+bullet_resource = ExtResource("2_eqrx5")
+
+[node name="Detection" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 136
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_0vd0p")
+debug_color = Color(0.943998, 8.85606e-06, 0.599082, 0.42)
+
+[node name="FirePoint" type="Node2D" parent="."]
+
+[node name="Marker2D" parent="FirePoint" instance=ExtResource("3_af2be")]
+position = Vector2(119, 2)
+
+[node name="Fluctuate" parent="." instance=ExtResource("4_6x7n0")]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)

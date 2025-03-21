@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://3yymk8jbagx2"]
+
+[ext_resource type="Script" uid="uid://dvdwvfh7myf7y" path="res://通用/效果/波动实体/water_main.gd" id="1_op6if"]
+[ext_resource type="Shader" uid="uid://xqepkd1gngje" path="res://通用/效果/波动实体/water_main.gdshader" id="2_cjkgp"]
+[ext_resource type="Texture2D" uid="uid://c2db2thrc0tyv" path="res://icon.svg" id="3_qaeg1"]
+[ext_resource type="Script" uid="uid://b1c3ejlo2u3tw" path="res://通用/效果/波动实体/smoothed_line.gd" id="4_u3f4q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qaeg1"]
+shader = ExtResource("2_cjkgp")
+shader_parameter/tint = Color(0.549, 0.903, 0.986, 0.369)
+
+[sub_resource type="Curve2D" id="Curve2D_54gj2"]
+
+[node name="WaterMain" type="Node2D"]
+script = ExtResource("1_op6if")
+spring_number = 10
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(535, 205)
+texture = ExtResource("3_qaeg1")
+
+[node name="WaterPolygon" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_qaeg1")
+
+[node name="WaterBorder" type="Path2D" parent="."]
+curve = SubResource("Curve2D_54gj2")
+script = ExtResource("4_u3f4q")
+spline_length = 3.0
+metadata/_custom_type_script = "uid://b1c3ejlo2u3tw"
+
+[node name="Camera2D" type="Camera2D" parent="."]

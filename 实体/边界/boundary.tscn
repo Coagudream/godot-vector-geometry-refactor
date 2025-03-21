@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://casm63lhbsc77"]
+
+[ext_resource type="Script" uid="uid://bguryatdf6lep" path="res://实体/边界/boundary.gd" id="1_cjsq7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnn0p"]
+resource_local_to_scene = true
+
+[node name="Boundary" type="StaticBody2D"]
+collision_mask = 15
+collision_priority = 5.0
+script = ExtResource("1_cjsq7")
+
+[node name="Area" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dnn0p")

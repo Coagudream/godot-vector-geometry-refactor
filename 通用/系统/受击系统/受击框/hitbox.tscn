@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://nnfakwkk5yg1"]
+
+[ext_resource type="Script" path="res://通用/系统/受击系统/受击框/hitbox.gd" id="1_rpxmd"]
+
+[node name="Hitbox" type="Area2D"]
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("1_rpxmd")

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="PlayerState" load_steps=3 format=3 uid="uid://d71ix1kakhvx"]
+
+[ext_resource type="Script" uid="uid://1wxlpnatcbit" path="res://自定义资源/player_state.gd" id="1_py026"]
+[ext_resource type="Texture2D" uid="uid://dghrol0pe41j" path="res://粒子/square_bullet.png" id="2_nygna"]
+
+[resource]
+script = ExtResource("1_py026")
+sprite_2d = ExtResource("2_nygna")
+acc_speed = 75.0
+max_speed = 450.0
+spint_speed = 1000.0
+max_exp = 100.0
+vector_up_speed = 5.0
+vector_spend = 10.0
+max_vector = 100.0
+collision_damage = 20.0
+max_health = 100.0
+metadata/_custom_type_script = ExtResource("1_py026")

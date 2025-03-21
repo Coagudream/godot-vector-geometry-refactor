@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="BuffData" load_steps=3 format=3 uid="uid://dbbcq2mgljptq"]
+
+[ext_resource type="Texture2D" uid="uid://cwsy221vrao22" path="res://通用/系统/Buff系统/Buff/具体buff/Square.png" id="1_6v37f"]
+[ext_resource type="Script" uid="uid://d3ovb5ixmb7vm" path="res://通用/系统/Buff系统/Buff基类/BuffData.gd" id="1_me7ei"]
+
+[resource]
+script = ExtResource("1_me7ei")
+id = 1
+name = "速度增加"
+description = "速度增加30%"
+need_icon = true
+icon = ExtResource("1_6v37f")
+max_stack = 5
+prioity = 1
+tags = Array[String](["speed"])
+is_forever = false
+duration = 5.0
+tick_time = 0.0
+buff_time_updata_enum = "Add"
+buff_remove_stack_updata_enum = "Reduce"
+metadata/_custom_type_script = ExtResource("1_me7ei")

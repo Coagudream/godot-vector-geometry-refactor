@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://634x8bt6473u"]
+
+[ext_resource type="PackedScene" uid="uid://ruvl6e23h7xk" path="res://实体/玩家/方块/square.tscn" id="1_fj7yv"]
+[ext_resource type="Texture2D" uid="uid://c2db2thrc0tyv" path="res://icon.svg" id="2_tlwt5"]
+[ext_resource type="Script" uid="uid://cr8n4ay56jxha" path="res://icon.gd" id="3_aqk2v"]
+[ext_resource type="Script" uid="uid://bvf6u5dqlh61t" path="res://通用/系统/受击系统/受击框/hitbox.gd" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://bhwfusnh6r56t" path="res://UI/ui.tscn" id="5_036b0"]
+[ext_resource type="PackedScene" uid="uid://duheea1ybf20f" path="res://实体/核心/基座/core.tscn" id="5_dwbse"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
+size = Vector2(124, 128)
+
+[node name="World" type="Node2D"]
+
+[node name="Square" parent="." instance=ExtResource("1_fj7yv")]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-590, -489)
+texture = ExtResource("2_tlwt5")
+script = ExtResource("3_aqk2v")
+
+[node name="Hitbox" type="Area2D" parent="Icon"]
+collision_layer = 128
+collision_mask = 16
+script = ExtResource("3_tlwt5")
+metadata/_custom_type_script = "uid://bvf6u5dqlh61t"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/Hitbox"]
+shape = SubResource("RectangleShape2D_aqk2v")
+
+[node name="Label" type="Label" parent="Icon"]
+offset_left = -25.0
+offset_top = -98.0
+offset_right = 28.0
+offset_bottom = -71.0
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(-309, -494)
+texture = ExtResource("2_tlwt5")
+script = ExtResource("3_aqk2v")
+
+[node name="Hitbox" type="Area2D" parent="Icon2"]
+collision_layer = 128
+collision_mask = 16
+script = ExtResource("3_tlwt5")
+metadata/_custom_type_script = "uid://bvf6u5dqlh61t"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon2/Hitbox"]
+shape = SubResource("RectangleShape2D_aqk2v")
+
+[node name="Label" type="Label" parent="Icon2"]
+offset_left = -25.0
+offset_top = -98.0
+offset_right = 28.0
+offset_bottom = -71.0
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(-465, -25)
+texture = ExtResource("2_tlwt5")
+script = ExtResource("3_aqk2v")
+
+[node name="Hitbox" type="Area2D" parent="Icon3"]
+collision_layer = 128
+collision_mask = 16
+script = ExtResource("3_tlwt5")
+metadata/_custom_type_script = "uid://bvf6u5dqlh61t"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon3/Hitbox"]
+shape = SubResource("RectangleShape2D_aqk2v")
+
+[node name="Label" type="Label" parent="Icon3"]
+offset_left = -25.0
+offset_top = -98.0
+offset_right = 28.0
+offset_bottom = -71.0
+
+[node name="Core" parent="." instance=ExtResource("5_dwbse")]
+position = Vector2(810, -580)
+scale = Vector2(0.7, 0.7)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("5_036b0")]
+metadata/_edit_lock_ = true

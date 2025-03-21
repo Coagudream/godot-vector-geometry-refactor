@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://32a7581xdoh5"]
+
+[ext_resource type="Shader" uid="uid://c4oe8ce4lyych" path="res://着色/圆环波动/fiuctuate_2.gdshader" id="1_jtehl"]
+[ext_resource type="Script" uid="uid://ddvnmtctm3c16" path="res://着色/圆环波动/fluctuate.gd" id="2_1lveq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r84d0"]
+shader = ExtResource("1_jtehl")
+shader_parameter/radius = 0.4
+shader_parameter/ring_count_total = 2
+shader_parameter/ring_variation = 0.0
+shader_parameter/ring_speed = 5.0
+shader_parameter/ring_color = Color(1, 1, 1, 0.761)
+shader_parameter/amplitude = 0.01
+shader_parameter/ring_width = 0.001
+
+[node name="Fluctuate" type="ColorRect"]
+material = SubResource("ShaderMaterial_r84d0")
+offset_left = -144.0
+offset_top = -144.0
+offset_right = 145.0
+offset_bottom = 145.0
+mouse_filter = 2
+script = ExtResource("2_1lveq")

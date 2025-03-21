@@ -1,0 +1,1 @@
+Propety和角色属性管理类（character_propety）对应

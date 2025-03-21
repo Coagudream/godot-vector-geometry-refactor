@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://jxtdoeca4fun"]
+
+[ext_resource type="Texture2D" uid="uid://dcb8dlrgkjeb5" path="res://升级选择/艺术/speed_up.png" id="1_48tyj"]
+[ext_resource type="Script" uid="uid://b37tbklfhsmsc" path="res://升级选择/具体卡牌/max_pass_up.gd" id="1_vgvs3"]
+
+[resource]
+script = ExtResource("1_vgvs3")
+icon = ExtResource("1_48tyj")
+tooltip = ""
+type = 0
+metadata/_custom_type_script = "uid://dlsqev8ps6j4d"

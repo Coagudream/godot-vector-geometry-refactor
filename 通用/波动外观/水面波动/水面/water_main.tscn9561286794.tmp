@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://3yymk8jbagx2"]
+
+[ext_resource type="Script" uid="uid://dvdwvfh7myf7y" path="res://通用/波动实体/水面/water_main.gd" id="1_op6if"]
+[ext_resource type="Shader" uid="uid://xqepkd1gngje" path="res://通用/波动实体/水面/water_main.gdshader" id="2_cjkgp"]
+[ext_resource type="Script" uid="uid://b1c3ejlo2u3tw" path="res://通用/波动实体/平滑曲线/smoothed_line.gd" id="4_u3f4q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qaeg1"]
+shader = ExtResource("2_cjkgp")
+shader_parameter/tint = Color(0.549, 0.903, 0.986, 0.369)
+
+[sub_resource type="Curve2D" id="Curve2D_54gj2"]
+
+[node name="WaterMain" type="Node2D"]
+script = ExtResource("1_op6if")
+distance_between_springs = 48
+spring_number = 48
+borad_thickness = 8.0
+spline_length = 12.0
+
+[node name="WaterPolygon" type="Polygon2D" parent="."]
+top_level = true
+material = SubResource("ShaderMaterial_qaeg1")
+antialiased = true
+
+[node name="WaterBorder" type="Path2D" parent="."]
+curve = SubResource("Curve2D_54gj2")
+script = ExtResource("4_u3f4q")
+metadata/_custom_type_script = "uid://b1c3ejlo2u3tw"

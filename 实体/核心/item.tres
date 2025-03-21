@@ -1,0 +1,51 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://ol0nus0uyag1"]
+
+[ext_resource type="Texture2D" uid="uid://q05v2pbrukmb" path="res://实体/核心/锯齿/art/sawtooth1.png" id="1_hw1nx"]
+[ext_resource type="Texture2D" uid="uid://b7s0njw7vdcvl" path="res://实体/核心/锯齿/art/sawtooth2.png" id="2_ni8l1"]
+[ext_resource type="Texture2D" uid="uid://ctbddaurxdm77" path="res://实体/核心/锯齿/art/sawtooth3.png" id="3_bjpsh"]
+[ext_resource type="Texture2D" uid="uid://stkl58k4cdea" path="res://实体/核心/锯齿/art/sawtooth4.png" id="4_em535"]
+[ext_resource type="Texture2D" uid="uid://bkifx4ucactfc" path="res://实体/核心/锯齿/art/sawtooth5.png" id="5_ktpeb"]
+[ext_resource type="Texture2D" uid="uid://nstcgx5osek0" path="res://实体/核心/锯齿/art/sawtooth6.png" id="6_6076d"]
+[ext_resource type="Texture2D" uid="uid://cw7d0lwn7hec3" path="res://实体/核心/锯齿/art/sawtooth7.png" id="7_bv14g"]
+[ext_resource type="Texture2D" uid="uid://chedvpi5dr04f" path="res://实体/核心/锯齿/art/sawtooth8.png" id="8_w0jr5"]
+[ext_resource type="Texture2D" uid="uid://dsl3ywj4qh1hi" path="res://实体/核心/锯齿/art/sawtooth9.png" id="9_xq3en"]
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("1_hw1nx")
+}, {
+"duration": 0.3,
+"texture": ExtResource("2_ni8l1")
+}, {
+"duration": 0.3,
+"texture": ExtResource("3_bjpsh")
+}, {
+"duration": 0.3,
+"texture": ExtResource("4_em535")
+}, {
+"duration": 0.3,
+"texture": ExtResource("5_ktpeb")
+}, {
+"duration": 0.3,
+"texture": ExtResource("6_6076d")
+}, {
+"duration": 0.3,
+"texture": ExtResource("7_bv14g")
+}, {
+"duration": 0.3,
+"texture": ExtResource("8_w0jr5")
+}, {
+"duration": 0.3,
+"texture": ExtResource("9_xq3en")
+}],
+"loop": true,
+"name": &"sawtooth",
+"speed": 9.0
+}]

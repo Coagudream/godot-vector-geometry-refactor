@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyi21t6uiy61u"]
+
+[ext_resource type="Script" uid="uid://8ytdqijrceqa" path="res://通用/系统/Buff系统/Buff基类/BuffHandle.gd" id="1_11djl"]
+[ext_resource type="PackedScene" uid="uid://dqdrrbfoxbito" path="res://通用/系统/Buff系统/Buff/类/buff_design.tscn" id="2_tcmah"]
+
+[node name="BuffHandle" type="GridContainer"]
+offset_right = 348.0
+offset_bottom = 128.0
+columns = 8
+script = ExtResource("1_11djl")
+
+[node name="BuffDesign" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign2" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign3" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign4" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign5" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign6" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign7" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign8" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign9" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign10" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign11" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign12" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign13" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign14" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign15" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign16" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[node name="BuffDesign17" parent="." instance=ExtResource("2_tcmah")]
+layout_mode = 2
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]

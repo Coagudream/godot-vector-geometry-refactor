@@ -1,0 +1,157 @@
+[gd_scene load_steps=36 format=3 uid="uid://duheea1ybf20f"]
+
+[ext_resource type="Script" uid="uid://cqkmejblh76q" path="res://实体/核心/基座/core.gd" id="1_1evbl"]
+[ext_resource type="Texture2D" uid="uid://cvj0rniidqqcx" path="res://实体/核心/基座/core_art/core1.png" id="1_6kfih"]
+[ext_resource type="Texture2D" uid="uid://d4ahdgnxaevdw" path="res://实体/核心/基座/core_art/core2.png" id="2_1evbl"]
+[ext_resource type="Resource" uid="uid://bqhgap7b87b4g" path="res://实体/核心/锯齿/sawtooth.tres" id="2_pmhi7"]
+[ext_resource type="PackedScene" uid="uid://c0pe3nyu4b4cw" path="res://实体/核心/round.tscn" id="3_oup07"]
+[ext_resource type="Texture2D" uid="uid://1i80svwl0k05" path="res://实体/核心/基座/core_art/core3.png" id="3_pmhi7"]
+[ext_resource type="Texture2D" uid="uid://bh0depthhv4px" path="res://实体/核心/基座/core_art/core4.png" id="4_f1esl"]
+[ext_resource type="Texture2D" uid="uid://1n0wglxv16g" path="res://实体/核心/基座/core_art/core5.png" id="5_as1ba"]
+[ext_resource type="Texture2D" uid="uid://dkagta0trpv6e" path="res://实体/核心/基座/core_art/core6.png" id="6_kygkk"]
+[ext_resource type="Texture2D" uid="uid://bk6h5yo1usyit" path="res://实体/核心/基座/core_art/core7.png" id="7_slfqg"]
+[ext_resource type="Texture2D" uid="uid://2gq3r5pothxr" path="res://实体/核心/基座/core_art/core8.png" id="8_pyvsb"]
+[ext_resource type="Texture2D" uid="uid://r7j5cyo4rkhu" path="res://实体/核心/基座/core_art/core9.png" id="9_kr6m8"]
+[ext_resource type="Texture2D" uid="uid://bn8mxrbr47rrj" path="res://实体/核心/基座/core_art/core10.png" id="10_lh2jc"]
+[ext_resource type="Texture2D" uid="uid://dp6hcxyfryt41" path="res://实体/核心/基座/core_art/core11.png" id="11_d6sxb"]
+[ext_resource type="Texture2D" uid="uid://bur2cf0newfqj" path="res://实体/核心/基座/core_art/core12.png" id="12_i08qg"]
+[ext_resource type="Texture2D" uid="uid://i5mkd7dlbod" path="res://实体/核心/基座/core_art/core13.png" id="13_juol5"]
+[ext_resource type="Texture2D" uid="uid://bdda72dv2wsa2" path="res://实体/核心/基座/core_art/core14.png" id="14_bvsw4"]
+[ext_resource type="Texture2D" uid="uid://ck7lrb58syo4a" path="res://实体/核心/基座/core_art/core15.png" id="15_y712e"]
+[ext_resource type="Texture2D" uid="uid://ue7bkl4osnwu" path="res://实体/核心/基座/core_art/core16.png" id="16_rhuro"]
+[ext_resource type="Texture2D" uid="uid://b3250u10tw6be" path="res://实体/核心/基座/core_art/core17.png" id="17_y1t2a"]
+[ext_resource type="Texture2D" uid="uid://d3q6sifoqbjk3" path="res://实体/核心/基座/core_art/core18.png" id="18_5pct5"]
+[ext_resource type="Texture2D" uid="uid://sndpm3s8xd5g" path="res://实体/核心/基座/core_art/core19.png" id="19_wg076"]
+[ext_resource type="Texture2D" uid="uid://b18165el3t1vj" path="res://实体/核心/基座/core_art/core20.png" id="20_mrx10"]
+[ext_resource type="Texture2D" uid="uid://djf6og1dxw5f7" path="res://实体/核心/基座/core_art/core21.png" id="21_cc3bw"]
+[ext_resource type="Texture2D" uid="uid://c2umfcrawfyfw" path="res://实体/核心/基座/core_art/core22.png" id="22_3jan2"]
+[ext_resource type="Texture2D" uid="uid://bfbghe4wfhw2o" path="res://实体/核心/基座/core_art/core23.png" id="23_b6jxw"]
+[ext_resource type="Texture2D" uid="uid://d34iathhnrugo" path="res://实体/核心/基座/core_art/core24.png" id="24_0jlmo"]
+[ext_resource type="Texture2D" uid="uid://cehwul2bubm1d" path="res://实体/核心/基座/core_art/core25.png" id="25_8aiwv"]
+[ext_resource type="Texture2D" uid="uid://bw6spf4fvunrh" path="res://实体/核心/基座/core_art/core26.png" id="26_0bdwq"]
+[ext_resource type="Texture2D" uid="uid://72uw8guq45g1" path="res://实体/核心/基座/core_art/core27.png" id="27_rgs50"]
+[ext_resource type="Texture2D" uid="uid://deawoxi6mqtdl" path="res://实体/核心/基座/core_art/core28.png" id="28_mtbhx"]
+[ext_resource type="Texture2D" uid="uid://dxn26qs4dkq0b" path="res://实体/核心/基座/core_art/core29.png" id="29_huph6"]
+[ext_resource type="SpriteFrames" uid="uid://ol0nus0uyag1" path="res://实体/核心/item.tres" id="32_u26yo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oup07"]
+radius = 143.056
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qdgqd"]
+animations = [{
+"frames": [{
+"duration": 1.2,
+"texture": ExtResource("1_6kfih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1evbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pmhi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f1esl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_as1ba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kygkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_slfqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pyvsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kr6m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lh2jc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d6sxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_i08qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_juol5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bvsw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_y712e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rhuro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_y1t2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5pct5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wg076")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mrx10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_cc3bw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_3jan2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_b6jxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_0jlmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_8aiwv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0bdwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_rgs50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_mtbhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_huph6")
+}],
+"loop": true,
+"name": &"core",
+"speed": 29.0
+}]
+
+[node name="Core" type="StaticBody2D"]
+collision_layer = 257
+collision_mask = 0
+script = ExtResource("1_1evbl")
+core_resource = ExtResource("2_pmhi7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oup07")
+
+[node name="Round" parent="." instance=ExtResource("3_oup07")]
+
+[node name="Group" type="Node2D" parent="."]
+
+[node name="Base" type="AnimatedSprite2D" parent="Group"]
+sprite_frames = SubResource("SpriteFrames_qdgqd")
+animation = &"core"
+autoplay = "core"
+frame_progress = 0.928704
+
+[node name="Item" type="AnimatedSprite2D" parent="Group"]
+unique_name_in_owner = true
+sprite_frames = ExtResource("32_u26yo")
+animation = &"empty"

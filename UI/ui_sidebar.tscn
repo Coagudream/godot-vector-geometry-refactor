@@ -1,0 +1,141 @@
+[gd_scene load_steps=3 format=3 uid="uid://xxhqof0jcdmq"]
+
+[ext_resource type="Script" uid="uid://dfby45a1okl8c" path="res://UI/ui_sidebar.gd" id="1_qwgbm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dajm1"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.560955, 0.560955, 0.560955, 1)
+
+[node name="V2" type="PanelContainer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -271.0
+offset_top = -331.0
+offset_bottom = 331.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dajm1")
+script = ExtResource("1_qwgbm")
+
+[node name="PropertyField" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MaxHealth" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "MaxHealth"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollDamage" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "CollDamage"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AccSpeed" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "AccSpeed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxSpeed" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "MaxSpeed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxVector" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "MaxVector"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VectorUp" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "VectorUp"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VectorSpend" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "VectorSpend"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Segmentation" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Damage" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "Damage"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BulletSpeed" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "BulletSpeed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxPassBody" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "MaxPassBody"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Duation" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "Duation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="la13" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "占位符"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="la14" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "占位符"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="la15" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "占位符"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="la16" type="Label" parent="PropertyField"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 27
+text = "占位符"
+horizontal_alignment = 1
+vertical_alignment = 1

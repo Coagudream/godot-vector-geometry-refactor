@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://bw5r1by4cl8ll"]
+
+[ext_resource type="Script" uid="uid://ii6ku6xqjy1s" path="res://实体/玩家/类/player.gd" id="1_pr1jp"]
+[ext_resource type="Script" uid="uid://chqiw1bq34u7x" path="res://通用/状态机/StateMachine.gd" id="2_71x5c"]
+[ext_resource type="Script" uid="uid://dad657qecdfxf" path="res://通用/系统/受击系统/攻击框/hurtbox.gd" id="3_g84qe"]
+[ext_resource type="Script" uid="uid://ctyc0aeilhnq5" path="res://实体/玩家/类/player_camera.gd" id="4_p1cy0"]
+[ext_resource type="Script" uid="uid://bvf6u5dqlh61t" path="res://通用/系统/受击系统/受击框/hitbox.gd" id="5_1ebyd"]
+[ext_resource type="Script" uid="uid://c1h0iq8lxx7ix" path="res://实体/玩家/类/状态/idle.gd" id="5_obnmp"]
+[ext_resource type="Script" uid="uid://cdx2oan7scuoy" path="res://实体/玩家/类/状态/move.gd" id="6_u0in6"]
+[ext_resource type="Script" uid="uid://tv7c68dog7i" path="res://实体/玩家/类/状态/sprint.gd" id="7_0a6cu"]
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 15
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_pr1jp")
+
+[node name="Group" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Hitbox" type="Area2D" parent="Group"]
+unique_name_in_owner = true
+collision_layer = 32
+collision_mask = 64
+script = ExtResource("5_1ebyd")
+
+[node name="Hurtbox" type="Area2D" parent="Group"]
+collision_layer = 16
+collision_mask = 128
+script = ExtResource("3_g84qe")
+metadata/_custom_type_script = "uid://dad657qecdfxf"
+
+[node name="PlayerCamera" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("4_p1cy0")
+player = NodePath("..")
+
+[node name="SateMachine" type="Node" parent="."]
+script = ExtResource("2_71x5c")
+
+[node name="IDLE" type="Node" parent="SateMachine"]
+script = ExtResource("5_obnmp")
+
+[node name="MOVE" type="Node" parent="SateMachine"]
+script = ExtResource("6_u0in6")
+
+[node name="SPRINT" type="Node" parent="SateMachine"]
+script = ExtResource("7_0a6cu")
+
+[node name="Timer" type="Node" parent="."]
+
+[node name="SprintTimer" type="Timer" parent="Timer"]
+wait_time = 0.4
+one_shot = true

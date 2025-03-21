@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqdrrbfoxbito"]
+
+[ext_resource type="Script" uid="uid://dw3efppq1nk8y" path="res://通用/系统/Buff系统/Buff基类/BuffDesign.gd" id="1_5677y"]
+[ext_resource type="Resource" uid="uid://dbbcq2mgljptq" path="res://通用/系统/Buff系统/Buff/具体buff/speed_up.tres" id="2_cu1mm"]
+[ext_resource type="Texture2D" uid="uid://dghrol0pe41j" path="res://粒子/square_bullet.png" id="2_v23oa"]
+
+[node name="BuffDesign" type="MarginContainer"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5677y")
+buff_data = ExtResource("2_cu1mm")
+
+[node name="Icon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_v23oa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Storey" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 15
+text = "23"
+horizontal_alignment = 1
+vertical_alignment = 1

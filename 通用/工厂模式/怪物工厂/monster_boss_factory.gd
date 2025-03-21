@@ -1,0 +1,2 @@
+class_name MonsterBossFactory
+extends MonsterFactory
