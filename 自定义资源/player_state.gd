@@ -51,7 +51,7 @@ var lv:int:
 	set(v):
 		lv = v
 		PlayerState_changed.emit()
-		Events.player_lv_up.emit(self)
+		Events.player_lv_up.emit()
 
 
 #矢量值系统

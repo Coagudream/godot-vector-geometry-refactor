@@ -116,6 +116,23 @@ focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_eh208")
 text = "player up"
 
+[node name="Button3" type="Button" parent="UiLayer/text"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 388.0
+offset_top = 956.0
+offset_right = 540.0
+offset_bottom = 1028.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_eh208")
+text = "player exp up"
+
 [node name="VisualLayer" type="CanvasLayer" parent="."]
 script = ExtResource("9_rchh0")
 
@@ -146,6 +163,7 @@ vertical_alignment = 1
 [node name="RoundLayer" type="CanvasLayer" parent="."]
 
 [node name="UpCardManager" parent="RoundLayer" instance=ExtResource("12_426s4")]
+process_mode = 3
 visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -153,3 +171,4 @@ environment = SubResource("Environment_dwbse")
 
 [connection signal="pressed" from="UiLayer/text/Button" to="UiLayer/text" method="_on_button_pressed"]
 [connection signal="pressed" from="UiLayer/text/Button2" to="UiLayer/text" method="_on_button_2_pressed"]
+[connection signal="pressed" from="UiLayer/text/Button3" to="UiLayer/text" method="_on_button_3_pressed"]

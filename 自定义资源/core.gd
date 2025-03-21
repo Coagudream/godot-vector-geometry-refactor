@@ -7,5 +7,5 @@ extends Resource
 
 
 #接口
-func apply_core(player_array:Array[Node]) -> void:
+func apply_core(_player_array:Array[Node]) -> void:
 	pass

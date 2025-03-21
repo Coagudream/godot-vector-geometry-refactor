@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 	node_decoration(delta)
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 ##子弹消失时间
@@ -31,7 +31,7 @@ func time_over_bullet() -> void:
 
 ##旋转子弹
 func node_decoration(delta:float) -> void:
-	var rotate_value:float 
+	var rotate_value:float = 0.0
 	rotate_value += delta * rotate_corrected_value
 	group.rotate(rotate_value)
 

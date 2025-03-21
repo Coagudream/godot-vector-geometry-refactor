@@ -31,6 +31,15 @@ func _updata_ui_data() -> void:
 	hp_bar.max_value = playerstate.max_health
 	exp_bar.max_value = playerstate.max_exp
 	vector_bar.max_value = playerstate.max_vector
-	hp_bar.value = playerstate.health
-	exp_bar.value = playerstate.exps
-	vector_bar.value = playerstate.vector
+	
+	tween_value(hp_bar,playerstate.health)
+	tween_value(exp_bar,playerstate.exps)
+	tween_value(vector_bar,playerstate.vector)
+	
+	
+	lv.text = "等级：%s" %playerstate.lv
+
+
+func tween_value(bar:TextureProgressBar,target_value:float) -> void:
+	var tween :Tween = create_tween()
+	tween.tween_property(bar,"value",target_value,0.15).set_ease(Tween.EASE_OUT)

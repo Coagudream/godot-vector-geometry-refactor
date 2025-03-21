@@ -32,11 +32,10 @@ func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
 	core = get_tree().get_first_node_in_group("Core")
 	
-	
 	enemy_property.Enemystate_changed.connect(up_data)
 	taregt_count_select(enemy_property.taregt_count)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	move(target_position)
 
@@ -75,6 +74,7 @@ func up_data() -> void:
 
 ##死亡处理
 func died() -> void:
+	add_player_exps()
 	queue_free()
 
 
@@ -87,6 +87,16 @@ func feedback() -> void:
 	
 	var shark = Sharker.new()
 	shark.sharker(self,10)
+
+##玩家经验赋值
+func add_player_exps() -> void:
+	var arr_player:Array[Node] = [player]
+	var new_exps : = ExpEffect.new()
+	new_exps.amount = 20
+	new_exps.execute(arr_player)
+
+
+
 
 #属性修改
 

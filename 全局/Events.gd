@@ -7,7 +7,7 @@ signal request_next_round_start  ##请求下一个回合开始
 
 
 #玩家
-signal player_lv_up(player_state:PlayerState)  ##玩家升级信号
+signal player_lv_up()  ##玩家升级信号
 signal request_injury_flashing                 ##请求受伤红闪
 signal request_low_blood_volume_warning_start  ##请求开始低血量预警
 signal request_low_blood_volume_warning_exit   ##请求结束低血量预警

@@ -15,7 +15,7 @@ var current_round:int = 1:
 		if current_round == max_round and not is_endless:
 			print("游戏胜利")
 
-var current_round_duration:float = 30:
+var current_round_duration:float = 3:
 	set(v):
 		current_round_duration = v
 		if current_round_duration <= 0:

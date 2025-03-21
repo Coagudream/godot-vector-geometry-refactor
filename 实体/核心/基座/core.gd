@@ -5,7 +5,7 @@ enum STATE {no_select,selected}
 
 @onready var item: AnimatedSprite2D = %Item
 @onready var base: AnimatedSprite2D = $Group/Base
-@onready var round: Round = $Round
+@onready var round_circle: Round = $Round
 
 @export var core_resource :Core:
 	set(v):
@@ -52,10 +52,10 @@ func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
 	Events.core_inning_start.connect(core_start)
 
-func _process(delta: float) -> void:
-	round.move_radius()
+func _process(_delta: float) -> void:
+	round_circle.move_radius()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if not core_resource:
 		return
 	if current_state == STATE.selected and core_resource.permanent:
@@ -67,7 +67,7 @@ func _input(event: InputEvent) -> void:
 		if player.player_property.vector >= player.player_property.vector_spend :
 			var tween:Tween = create_tween()
 			player.player_property.vector -= player.player_property.vector_spend
-			tween.tween_property(player,"global_position",round.get_move_radius(),0.3).set_trans(Tween.TRANS_CUBIC)
+			tween.tween_property(player,"global_position",round_circle.get_move_radius(),0.3).set_trans(Tween.TRANS_CUBIC)
 
 ##播放动画
 func player_item(anim_name:String) -> void:
@@ -116,16 +116,16 @@ func restore() -> void:
 ##退出选中函数
 func no_selected() -> void:
 	Events.request_camera_sharked.emit(250)
-	round.target_position = Vector2(0.0,0.0)
-	round.visible = false
+	round_circle.target_position = Vector2(0.0,0.0)
+	round_circle.visible = false
 	player.pointer.texture = null
 	player.has_connect_core = false
 
 ##选中函数
 func has_selected() -> void:
 	Events.request_camera_sharked.emit(250)
-	round.target_position = Vector2(round_radius,0.0)
-	round.visible = true
+	round_circle.target_position = Vector2(round_radius,0.0)
+	round_circle.visible = true
 	player.has_connect_core = true
 	player.target_position = self.global_position
 	_on_apply_core()
@@ -147,3 +147,6 @@ func take_health(amount:float) -> void:
 
 func take_max_health(amount:float) -> void:
 	max_health += amount
+	
+func take_exp(amount:float) -> void:
+	exps += amount

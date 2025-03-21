@@ -17,5 +17,5 @@ var amount :float
 func set_var() -> void:
 	pass
 
-func apply_effect(nodes:Array[Node]):
+func apply_effect(_nodes:Array[Node]):
 	pass

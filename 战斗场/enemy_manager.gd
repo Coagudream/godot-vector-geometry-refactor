@@ -22,12 +22,12 @@ func add_enemy(current_round:int) -> void:
 		random_ememies_pposition(new_enemy)
 
 func random_ememies_pposition(enemy:Enemy) -> void:
-	var range:Rect2 = bounder_rect
-	enemy.global_position = Vector2(randf_range(range.position.x,range.end.x),randf_range(range.position.y,range.end.y))
+	var rect2_range:Rect2 = bounder_rect
+	enemy.global_position = Vector2(randf_range(rect2_range.position.x,rect2_range.end.x),randf_range(rect2_range.position.y,rect2_range.end.y))
 	add_child(enemy)
 
 
 func remove_all_enemy() -> void:
 	for child in get_children():
 		if child is Enemy:
-			child.died()
+			child.queue_free()

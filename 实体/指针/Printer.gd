@@ -16,5 +16,5 @@ func _process(_delta: float) -> void:
 	set_point_position(1,target_position)
 	line_collision.shape.b = target_position
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	contact_area = line_area.get_overlapping_areas()

@@ -4,6 +4,7 @@ extends PanelContainer
 @onready var icon: TextureRect = %Icon
 @onready var item_tooltip: RichTextLabel = %ItemTooltip
 
+
 @export var player_up: PlayerUp:
 	set(v):
 		player_up = v
