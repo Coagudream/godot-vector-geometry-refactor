@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://634x8bt6473u"]
+[gd_scene load_steps=18 format=3 uid="uid://634x8bt6473u"]
 
+[ext_resource type="Script" uid="uid://dehoxo5pm174k" path="res://战斗场/events_manager.gd" id="1_2sqtf"]
 [ext_resource type="PackedScene" uid="uid://b02qkgrdocqhs" path="res://实体/边界/boundary_group.tscn" id="1_372nk"]
 [ext_resource type="Script" uid="uid://bogmstcopu5qk" path="res://战斗场/round_manager.gd" id="1_426s4"]
 [ext_resource type="Script" uid="uid://baguatb6qiu40" path="res://战斗场/enemy_manager.gd" id="2_eh208"]
@@ -39,10 +40,15 @@ glow_blend_mode = 0
 metadata/_edit_vertical_guides_ = [-3000.0, 3000.0]
 metadata/_edit_horizontal_guides_ = [-1717.0, 1717.0]
 
+[node name="EventsManager" type="Node" parent="."]
+script = ExtResource("1_2sqtf")
+
 [node name="RoundManager" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("1_426s4")
 
 [node name="EnemyManager" type="Node2D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("2_eh208")
 
 [node name="Square" parent="." instance=ExtResource("3_eh208")]
@@ -52,6 +58,7 @@ position = Vector2(-1092, -486)
 scale = Vector2(0.7, 0.7)
 
 [node name="BoundaryManager" parent="." instance=ExtResource("1_372nk")]
+unique_name_in_owner = true
 metadata/_edit_lock_ = true
 
 [node name="UiLayer" type="CanvasLayer" parent="."]

@@ -1,7 +1,6 @@
 class_name RoundManager
 extends Node
 
-
 @onready var round_duration: Label = %RoundDuration
 
 @export var is_endless:bool = false
@@ -15,7 +14,7 @@ var current_round:int = 1:
 		if current_round == max_round and not is_endless:
 			print("游戏胜利")
 
-var current_round_duration:float = 3:
+var current_round_duration:float = 30:
 	set(v):
 		current_round_duration = v
 		if current_round_duration <= 0:
