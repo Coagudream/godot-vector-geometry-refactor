@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://27myv37jmpbo"]
 
-[ext_resource type="Script" uid="uid://oya8ivxwgax" path="res://UI/ui_top_left_corner.gd" id="1_e0e5u"]
+[ext_resource type="Script" uid="uid://oya8ivxwgax" path="res://UI/玩家属性/ui_top_left_corner.gd" id="1_e0e5u"]
 [ext_resource type="Shader" uid="uid://cb46y08m3qb8a" path="res://着色/线条滚动/scrolling_line.gdshader" id="2_e0e5u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6gg6"]

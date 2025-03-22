@@ -1,7 +1,7 @@
 shader_type canvas_item;
 
-uniform vec3 color_one : source_color;
-uniform vec3 color_two : source_color;
+uniform vec4 color_one : source_color;
+uniform vec4 color_two : source_color;
 
 uniform float angle = 20.0;
 uniform float line_count = 20.0;
@@ -27,8 +27,8 @@ void fragment() {
     uv.x *= a;
     uv = rotate(uv, angle);
     float g = stripe(uv);
-    vec3 col = mix(color_one, color_two, smoothstep(0.0, blur, g));
-    COLOR = vec4(col, 1.0);
+    vec4 col = mix(color_one, color_two, smoothstep(0.0, blur, g));
+    COLOR = col;
 }
 
 

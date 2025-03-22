@@ -12,3 +12,7 @@ func _on_button_2_pressed() -> void:
 
 func _on_button_3_pressed() -> void:
 	square.take_exp(200)
+
+
+func _on_button_4_pressed() -> void:
+	Events.requesr_round_events.emit()

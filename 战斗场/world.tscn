@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://634x8bt6473u"]
+[gd_scene load_steps=19 format=3 uid="uid://634x8bt6473u"]
 
 [ext_resource type="Script" uid="uid://dehoxo5pm174k" path="res://战斗场/events_manager.gd" id="1_2sqtf"]
 [ext_resource type="PackedScene" uid="uid://b02qkgrdocqhs" path="res://实体/边界/boundary_group.tscn" id="1_372nk"]
@@ -6,13 +6,14 @@
 [ext_resource type="Script" uid="uid://baguatb6qiu40" path="res://战斗场/enemy_manager.gd" id="2_eh208"]
 [ext_resource type="PackedScene" uid="uid://duheea1ybf20f" path="res://实体/核心/基座/core.tscn" id="2_rchh0"]
 [ext_resource type="PackedScene" uid="uid://ruvl6e23h7xk" path="res://实体/玩家/方块/square.tscn" id="3_eh208"]
-[ext_resource type="PackedScene" uid="uid://27myv37jmpbo" path="res://UI/ui_top_left_corner.tscn" id="7_2xfnb"]
-[ext_resource type="PackedScene" uid="uid://xxhqof0jcdmq" path="res://UI/ui_sidebar.tscn" id="8_id4f2"]
+[ext_resource type="PackedScene" uid="uid://27myv37jmpbo" path="res://UI/玩家属性/ui_top_left_corner.tscn" id="7_2xfnb"]
+[ext_resource type="PackedScene" uid="uid://xxhqof0jcdmq" path="res://UI/玩家属性/ui_sidebar.tscn" id="8_id4f2"]
 [ext_resource type="Script" uid="uid://da0p44csnl55x" path="res://战斗场/text.gd" id="8_rchh0"]
 [ext_resource type="Shader" uid="uid://cb2kdbd35b86g" path="res://着色/屏幕周围闪烁/sprite.gdshader" id="9_372nk"]
 [ext_resource type="Script" uid="uid://byb7yl3ybixew" path="res://战斗场/visual_layer.gd" id="9_rchh0"]
 [ext_resource type="Script" uid="uid://dr04m8ok4i8wi" path="res://fps.gd" id="9_yfljp"]
 [ext_resource type="PackedScene" uid="uid://shabqrhu7q1q" path="res://升级选择/升级管理器/up_card_manager.tscn" id="12_426s4"]
+[ext_resource type="PackedScene" uid="uid://crmqrmuxd1go7" path="res://UI/回合事件显示/round_events_ui.tscn" id="14_k11o3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rchh0"]
 bg_color = Color(0.100559, 0.558644, 0.739763, 1)
@@ -140,6 +141,23 @@ focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_eh208")
 text = "player exp up"
 
+[node name="Button4" type="Button" parent="UiLayer/text"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 570.0
+offset_top = 956.0
+offset_right = 722.0
+offset_bottom = 1028.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_eh208")
+text = "random_evens"
+
 [node name="VisualLayer" type="CanvasLayer" parent="."]
 script = ExtResource("9_rchh0")
 
@@ -173,9 +191,15 @@ vertical_alignment = 1
 process_mode = 3
 visible = false
 
+[node name="RoundEventsUI" parent="RoundLayer" instance=ExtResource("14_k11o3")]
+visible = false
+modulate = Color(1, 1, 1, 0)
+mouse_filter = 2
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dwbse")
 
 [connection signal="pressed" from="UiLayer/text/Button" to="UiLayer/text" method="_on_button_pressed"]
 [connection signal="pressed" from="UiLayer/text/Button2" to="UiLayer/text" method="_on_button_2_pressed"]
 [connection signal="pressed" from="UiLayer/text/Button3" to="UiLayer/text" method="_on_button_3_pressed"]
+[connection signal="pressed" from="UiLayer/text/Button4" to="UiLayer/text" method="_on_button_4_pressed"]

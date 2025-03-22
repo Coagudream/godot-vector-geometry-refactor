@@ -1,10 +1,13 @@
 extends Node
 
-#游戏
-signal round_start(current_round:int)  ##第一回合回合开始
+#游戏回合
+signal round_start(current_round:int)  ##回合开始
 signal round_end  ##回合结束
 signal request_next_round_start  ##请求下一个回合开始
 
+#回合事件
+signal requesr_round_events  ##请求回合事件
+signal round_events_ui(event:String,current:EventsManager.GRADE)  ##回合事件UI显示
 
 #玩家
 signal player_lv_up()  ##玩家升级信号
@@ -20,7 +23,7 @@ signal requset_hide_card_manager  ##请求隐藏卡牌组
 signal game_boundary_changed(rect:Rect2)   ##游戏边界改变信号
 
 #核心
-signal core_inning_start   ## 指针与核心链接信号
+signal requset_core_inning_start   ## 指针与核心链接信号
 signal core_lv_up(current_lv:int)  ##核心升级信号
 signal core_broken  ##核心破碎信号
 

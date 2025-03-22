@@ -30,8 +30,7 @@ func _ready() -> void:
 
 
 ##移动全部边界（+/-表示边界方向）（正扩负缩）（事件）
-func move_boundary(move_distance:float,time:float) -> void:
-	
+func move_boundary(move_distance:float,time:float=7.0) -> void:
 	var tween: Tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(up,"global_position",Vector2(up.global_position.x,up.global_position.y-move_distance),time)
@@ -40,3 +39,23 @@ func move_boundary(move_distance:float,time:float) -> void:
 	tween.tween_property(right,"global_position",Vector2(right.global_position.x+move_distance,left.global_position.y),time)
 	# TODO 试试是不是改边界完再通知
 	rect = rect.grow(move_distance)
+
+##移动上边界
+func move_up_boundary(move_distance:float,time:float) -> void:
+	var tween: Tween = create_tween()
+	tween.tween_property(up,"global_position",Vector2(up.global_position.x,up.global_position.y-move_distance),time)
+
+##移动下边界
+func move_down_boundary(move_distance:float,time:float) -> void:
+	var tween: Tween = create_tween()
+	tween.tween_property(down,"global_position",Vector2(down.global_position.x,down.global_position.y +move_distance),time)
+
+##移动左边界
+func move_left_boundary(move_distance:float,time:float) -> void:
+	var tween: Tween = create_tween()
+	tween.tween_property(left,"global_position",Vector2(left.global_position.x-move_distance,left.global_position.y),time)
+
+##移动右边界
+func move_right_boundary(move_distance:float,time:float) -> void:
+	var tween: Tween = create_tween()
+	tween.tween_property(right,"global_position",Vector2(right.global_position.x+move_distance,left.global_position.y),time)

@@ -50,7 +50,7 @@ func _ready() -> void:
 	health = max_health
 	current_state = STATE.no_select
 	player = get_tree().get_first_node_in_group("Player")
-	Events.core_inning_start.connect(core_start)
+	Events.requset_core_inning_start.connect(core_start)
 
 func _process(_delta: float) -> void:
 	round_circle.move_radius()

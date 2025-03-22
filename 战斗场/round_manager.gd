@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 ##游戏第一次开始函数
 func first_round_start() -> void:
 	Events.round_start.emit(current_round)
-	Events.core_inning_start.emit()
+	Events.requset_core_inning_start.emit()
 
 ##回合结束处理函数
 func round_end() -> void:

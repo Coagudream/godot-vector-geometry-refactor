@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://xxhqof0jcdmq"]
 
-[ext_resource type="Script" uid="uid://dfby45a1okl8c" path="res://UI/ui_sidebar.gd" id="1_qwgbm"]
+[ext_resource type="Script" uid="uid://dfby45a1okl8c" path="res://UI/玩家属性/ui_sidebar.gd" id="1_qwgbm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dajm1"]
 bg_color = Color(1, 1, 1, 0)

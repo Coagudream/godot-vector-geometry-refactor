@@ -47,6 +47,7 @@ offset_left = -3155.5
 offset_top = -50.0
 offset_right = 3155.5
 offset_bottom = 50.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Left" parent="." instance=ExtResource("2_0vcwo")]
 position = Vector2(-3000, 0)
@@ -62,6 +63,7 @@ offset_top = -3156.0
 offset_right = 6361.0
 offset_bottom = -3056.0
 rotation = 1.5708
+metadata/_edit_use_anchors_ = true
 
 [node name="Right" parent="." instance=ExtResource("2_0vcwo")]
 position = Vector2(3000, 0)
@@ -77,6 +79,7 @@ offset_top = -3205.0
 offset_right = 6361.0
 offset_bottom = -3105.0
 rotation = 1.5708
+metadata/_edit_use_anchors_ = true
 
 [node name="Up" parent="." node_paths=PackedStringArray("color_rect") instance=ExtResource("2_0vcwo")]
 position = Vector2(0, -1719)
