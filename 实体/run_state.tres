@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RunStateS" load_steps=2 format=3 uid="uid://dmn12puhirtwi"]
+
+[ext_resource type="Script" uid="uid://cn62271xkwjrh" path="res://自定义资源/run_state.gd" id="1_cddls"]
+
+[resource]
+script = ExtResource("1_cddls")
+gem_amount = 50
+metadata/_custom_type_script = "uid://cn62271xkwjrh"

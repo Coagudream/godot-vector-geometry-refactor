@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgro264mmrrlf"]
+
+[ext_resource type="Texture2D" uid="uid://dfn1g5nmpjgyu" path="res://实体/宝石/gemstone.png" id="1_6lipk"]
+[ext_resource type="Script" uid="uid://elthqwehdqc1" path="res://战斗场/run_state.gd" id="1_rm7tn"]
+[ext_resource type="Resource" uid="uid://dmn12puhirtwi" path="res://实体/run_state.tres" id="2_4a28y"]
+
+[node name="RunStateUI" type="HBoxContainer"]
+script = ExtResource("1_rm7tn")
+run_state = ExtResource("2_4a28y")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(7.79, 0)
+layout_mode = 2
+texture = ExtResource("1_6lipk")
+stretch_mode = 2
+
+[node name="GemAmount" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "123"
+horizontal_alignment = 1
+vertical_alignment = 1

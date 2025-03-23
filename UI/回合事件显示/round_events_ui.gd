@@ -13,7 +13,7 @@ func chang_text_and_color(prompt:String,grade:EventsManager.GRADE) -> void:
 	chang_color(grade)
 	ui_show()
 
-
+##改变颜色
 func chang_color(grade:EventsManager.GRADE) -> void:
 	match grade:
 		EventsManager.GRADE.	Basic:
@@ -23,7 +23,7 @@ func chang_color(grade:EventsManager.GRADE) -> void:
 		EventsManager.GRADE.	Advanced:
 			up_color.material.set_shader_parameter("color_two",Color.RED)
 
-
+##ui展示
 func ui_show() -> void:
 	show()
 	var tewwn := create_tween()
@@ -31,9 +31,9 @@ func ui_show() -> void:
 	tewwn.tween_interval(1)
 	tewwn.finished.connect(ui_hide)
 
-
+##ui隐藏
 func ui_hide() -> void:
 	var tewwn := create_tween()
 	tewwn.tween_property(self,"modulate",Color(1.0,1.0,1.0,0.0),1)
 	tewwn.tween_interval(1)
-	tewwn.finished.connect(hide)
+	tewwn.finished.connect(hide)		

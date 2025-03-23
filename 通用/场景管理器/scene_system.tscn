@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://qb87hh7mxrhi"]
 
-[ext_resource type="Script" uid="uid://yxgmris0iwrb" path="res://场景管理器/scene_system.gd" id="1_dvtjr"]
+[ext_resource type="Script" uid="uid://yxgmris0iwrb" path="res://通用/场景管理器/scene_system.gd" id="1_dvtjr"]
 [ext_resource type="PackedScene" path="res://场景/主场景/main.tscn" id="2_nhpvx"]
 [ext_resource type="PackedScene" path="res://测试.tscn" id="3_y78p0"]
 

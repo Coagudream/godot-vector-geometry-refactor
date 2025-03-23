@@ -23,6 +23,7 @@ Events="*res://全局/Events.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
 
 [input]
 
@@ -79,7 +80,7 @@ mouse_right={
 [physics]
 
 common/physics_ticks_per_second=48
-2d/physics_engine="Rapier2D"
+2d/physics_engine="GodotPhysics2D"
 common/physics_interpolation=true
 
 [rendering]

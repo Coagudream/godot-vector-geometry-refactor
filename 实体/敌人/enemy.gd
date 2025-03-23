@@ -1,12 +1,16 @@
 class_name Enemy
 extends CharacterBody2D
 
+const GEM_STONE = preload("res://实体/宝石/gem_stone.tscn")
+const MAX_GAM_STONE_AMOUNT :int = 3
+
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var label: Label = $Label
 @onready var hitbox: Hitbox = $Hitbox
 @onready var hurtbox: Hurtbox = $Hurtbox
 
 @export var enemy :EnemyState
+
 
 var player:Player
 var core:CoreS
@@ -75,8 +79,14 @@ func up_data() -> void:
 ##死亡处理
 func died() -> void:
 	add_player_exps()
+	died_add_gamstone()
 	queue_free()
 
+func died_add_gamstone() -> void:
+	for i in range(randi_range(1,MAX_GAM_STONE_AMOUNT)):
+		var new_gem_stone := GEM_STONE.instantiate()
+		new_gem_stone.global_position = global_position + Vector2(randf_range(-30.0,30.0),randf_range(-30.0,30.0))
+		get_tree().root.add_child(new_gem_stone)
 
 ##效果
 func feedback() -> void:
@@ -96,10 +106,7 @@ func add_player_exps() -> void:
 	new_exps.execute(arr_player)
 
 
-
-
 #属性修改
-
 ##造成伤害函数
 func take_health(amount:float) -> void:
 	enemy_property.health += amount

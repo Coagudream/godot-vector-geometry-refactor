@@ -31,6 +31,7 @@ var health :float :
 	set(v):
 		health = clampf(v,0,max_health)
 		PlayerState_changed.emit()
+		print(health)
 		# TODO 设置渐变值
 		if health/max_health <= 0.3:
 			Events.request_low_blood_volume_warning_start.emit()
