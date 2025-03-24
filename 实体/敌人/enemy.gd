@@ -1,7 +1,7 @@
 class_name Enemy
 extends CharacterBody2D
 
-const GEM_STONE = preload("res://实体/宝石/gem_stone.tscn")
+const GEM_STONE := preload("res://实体/宝石/gem_stone.tscn")
 const MAX_GAM_STONE_AMOUNT :int = 3
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
@@ -82,11 +82,17 @@ func died() -> void:
 	died_add_gamstone()
 	queue_free()
 
+##死亡生成宝石
 func died_add_gamstone() -> void:
 	for i in range(randi_range(1,MAX_GAM_STONE_AMOUNT)):
 		var new_gem_stone := GEM_STONE.instantiate()
 		new_gem_stone.global_position = global_position + Vector2(randf_range(-30.0,30.0),randf_range(-30.0,30.0))
-		get_tree().root.add_child(new_gem_stone)
+		call_deferred("add_root_nodes",new_gem_stone)
+
+##死亡时在根节点添加节点
+func add_root_nodes(node:Node) -> void:
+	get_tree().root.add_child(node)
+
 
 ##效果
 func feedback() -> void:
