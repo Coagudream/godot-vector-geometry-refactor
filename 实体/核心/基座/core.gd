@@ -112,7 +112,6 @@ func restore() -> void:
 	pass
 
 
-
 ##退出选中函数
 func no_selected() -> void:
 	Events.request_camera_sharked.emit(250)

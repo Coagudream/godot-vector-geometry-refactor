@@ -1,8 +1,9 @@
-[gd_scene load_steps=37 format=3 uid="uid://duheea1ybf20f"]
+[gd_scene load_steps=38 format=3 uid="uid://duheea1ybf20f"]
 
 [ext_resource type="Script" uid="uid://cqkmejblh76q" path="res://实体/核心/基座/core.gd" id="1_1evbl"]
 [ext_resource type="Texture2D" uid="uid://cvj0rniidqqcx" path="res://实体/核心/基座/core_art/core1.png" id="1_6kfih"]
 [ext_resource type="Texture2D" uid="uid://d4ahdgnxaevdw" path="res://实体/核心/基座/core_art/core2.png" id="2_1evbl"]
+[ext_resource type="Resource" uid="uid://bqhgap7b87b4g" path="res://实体/核心/锯齿/sawtooth.tres" id="2_5nkr3"]
 [ext_resource type="PackedScene" uid="uid://c0pe3nyu4b4cw" path="res://实体/核心/round.tscn" id="3_oup07"]
 [ext_resource type="Texture2D" uid="uid://1i80svwl0k05" path="res://实体/核心/基座/core_art/core3.png" id="3_pmhi7"]
 [ext_resource type="Texture2D" uid="uid://bh0depthhv4px" path="res://实体/核心/基座/core_art/core4.png" id="4_f1esl"]
@@ -139,6 +140,7 @@ radius = 129.468
 collision_layer = 256
 collision_mask = 0
 script = ExtResource("1_1evbl")
+core_resource = ExtResource("2_5nkr3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_oup07")

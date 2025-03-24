@@ -36,6 +36,7 @@ func round_end_show_times() -> void:
 		await up_card_clicked
 	
 	player_lv_up_times = 0
+	Events.request_show_store.emit()
 
 
 ##展示玩家升级卡牌

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bim8vo4ibl8bo"]
+
+[ext_resource type="Texture2D" uid="uid://q05v2pbrukmb" path="res://实体/核心/锯齿/art/sawtooth1.png" id="1_e30qm"]
+[ext_resource type="Script" uid="uid://cg8tcfrx8m1wa" path="res://实体/道具/coll_damage_up.gd" id="2_885sd"]
+
+[resource]
+script = ExtResource("2_885sd")
+name = "长刺"
+icon = ExtResource("1_e30qm")
+tooltip = "碰撞伤害+10"
+type = 0
+gam_stone_spend = 10
+metadata/_custom_type_script = "uid://cx466qf28qv3n"

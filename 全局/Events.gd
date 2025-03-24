@@ -15,6 +15,9 @@ signal request_injury_flashing                 ##请求受伤红闪
 signal request_low_blood_volume_warning_start  ##请求开始低血量预警
 signal request_low_blood_volume_warning_exit   ##请求结束低血量预警
  
+#商店展示
+signal request_show_store()  ##请求商店展示
+
 #玩家升级卡牌
 signal requset_show_card_manager  ##请求展示卡牌组
 signal requset_hide_card_manager  ##请求隐藏卡牌组

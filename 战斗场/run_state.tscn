@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://elthqwehdqc1" path="res://战斗场/run_state.gd" id="1_rm7tn"]
 [ext_resource type="Resource" uid="uid://dmn12puhirtwi" path="res://实体/run_state.tres" id="2_4a28y"]
 
-[node name="RunStateUI" type="HBoxContainer"]
+[node name="RunStateUI" type="HBoxContainer" groups=["RunState"]]
 script = ExtResource("1_rm7tn")
 run_state = ExtResource("2_4a28y")
 

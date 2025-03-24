@@ -24,13 +24,14 @@ extends Node
 	set(v):
 		attack_interval = v
 		bullet._attack_interval =  attack_interval
-		
+		in_attack_interval = attack_interval
+
 @export var bullet_resource: Bullet
 
 var fire_point :Array[Vector2]
 var is_fire:bool = false
 var bullet: Bullet
-var in_attack_interval:float = attack_interval
+var in_attack_interval:float
 
 var point_target_node :Node2D
 var array_area : Array[Area2D]:

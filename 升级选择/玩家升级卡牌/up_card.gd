@@ -4,11 +4,11 @@ extends PanelContainer
 @onready var icon: TextureRect = %Icon
 @onready var item_tooltip: RichTextLabel = %ItemTooltip
 
-const COMMON = preload("res://升级选择/玩家升级卡牌/common.tres")
-const EPIC = preload("res://升级选择/玩家升级卡牌/epic.tres")
-const FINE = preload("res://升级选择/玩家升级卡牌/fine.tres")
-const LEGENDARY = preload("res://升级选择/玩家升级卡牌/legendary.tres")
-const RARE = preload("res://升级选择/玩家升级卡牌/rare.tres")
+const COMMON = preload("res://主题/common.tres")
+const EPIC = preload("res://主题/epic.tres")
+const FINE = preload("res://主题/fine.tres")
+const LEGENDARY = preload("res://主题/legendary.tres")
+const RARE = preload("res://主题/rare.tres")
 
 @export var player_up: PlayerUp:
 	set(v):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://634x8bt6473u"]
+[gd_scene load_steps=21 format=3 uid="uid://634x8bt6473u"]
 
 [ext_resource type="Script" uid="uid://dehoxo5pm174k" path="res://战斗场/events_manager.gd" id="1_2sqtf"]
 [ext_resource type="PackedScene" uid="uid://b02qkgrdocqhs" path="res://实体/边界/boundary_group.tscn" id="1_372nk"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://shabqrhu7q1q" path="res://升级选择/升级管理器/up_card_manager.tscn" id="12_426s4"]
 [ext_resource type="PackedScene" uid="uid://dgro264mmrrlf" path="res://战斗场/run_state.tscn" id="13_2xfnb"]
 [ext_resource type="PackedScene" uid="uid://crmqrmuxd1go7" path="res://UI/回合事件显示/round_events_ui.tscn" id="14_k11o3"]
+[ext_resource type="PackedScene" uid="uid://dmu6nxhcpkiwn" path="res://商店/store.tscn" id="16_id4f2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rchh0"]
 bg_color = Color(0.100559, 0.558644, 0.739763, 1)
@@ -187,7 +188,7 @@ text = "40"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RunStateUI" parent="VisualLayer" groups=["RunState"] instance=ExtResource("13_2xfnb")]
+[node name="RunStateUI" parent="VisualLayer" instance=ExtResource("13_2xfnb")]
 offset_left = 672.0
 offset_top = 63.0
 offset_right = 791.0
@@ -204,6 +205,10 @@ process_mode = 3
 visible = false
 modulate = Color(1, 1, 1, 0)
 mouse_filter = 2
+
+[node name="Store" parent="RoundLayer" instance=ExtResource("16_id4f2")]
+process_mode = 2
+visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dwbse")

@@ -46,4 +46,7 @@ func take_bullet_speed(amount:float) -> void:
 	
 func take_max_pass_body(amount:int) -> void:
 	weapon.take_max_pass_body(amount)
-	
+
+##设置攻击间隔
+func take_attack_interval(amount:float) -> void:
+	square_fire_point.take_attack_interval(amount)

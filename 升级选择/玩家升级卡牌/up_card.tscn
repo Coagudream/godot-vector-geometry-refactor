@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqusnchtc6h8y"]
 
 [ext_resource type="Texture2D" uid="uid://dcb8dlrgkjeb5" path="res://升级选择/艺术/speed_up.png" id="1_7luox"]
-[ext_resource type="StyleBox" uid="uid://br1b0wyfqd5cw" path="res://升级选择/玩家升级卡牌/legendary.tres" id="1_8blpu"]
+[ext_resource type="StyleBox" uid="uid://br1b0wyfqd5cw" path="res://主题/legendary.tres" id="1_8blpu"]
 [ext_resource type="Script" uid="uid://dp8k4h6j104av" path="res://升级选择/玩家升级卡牌/up_card.gd" id="1_u8t5v"]
 [ext_resource type="Resource" uid="uid://0was8ij4a4x7" path="res://升级选择/具体卡牌/speed_up.tres" id="2_8xfkb"]
 
