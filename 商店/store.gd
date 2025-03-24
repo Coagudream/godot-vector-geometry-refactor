@@ -11,6 +11,7 @@ const ITEMS_AMOUNT:int = 4
 const FIRE_TIME_DOWN = preload("res://实体/道具/fire_time_down.tres")
 const COLL_DAMAGE_UP = preload("res://实体/道具/coll_damage_up.tres")
 
+var item_lock: int
 var player:Player
 var run_state:RunState:
 	set(v):
@@ -41,10 +42,12 @@ func can_or_notcan_buy() -> void:
 ##刷新道具卡牌
 func refresh_items() -> void:
 	for child in items_container.get_children():
-		if not child.is_lock:
-			child.queue_free()
+		if child.is_lock:
+			item_lock += 1
+			continue
+		child.queue_free()
 	
-	for item in range(ITEMS_AMOUNT):
+	for item in range(ITEMS_AMOUNT - item_lock):
 		var new_item := ITEMS.instantiate()
 		new_item.items = text_effect()
 		new_item.player = player
@@ -52,6 +55,7 @@ func refresh_items() -> void:
 		new_item.already_is_buy.connect(can_or_notcan_buy)
 		items_container.add_child(new_item)
 	can_or_notcan_buy()
+	item_lock = 0
 
 
 func text_effect() -> Resource:
