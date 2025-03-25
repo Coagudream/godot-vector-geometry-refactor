@@ -38,12 +38,16 @@ extends PanelContainer
 			
 		_up_weapon_data_ui_data()
 
+var player:Player:
+	set(v):
+		if not is_node_ready():
+			await ready
+		player = v
+		playerstate = player.player_property
+		weaponstate = player.weapon
+
 func _ready() -> void:
-	var player := get_tree().get_first_node_in_group("Player")
-	if not player:
-		return
-	playerstate = player.player_property
-	weaponstate = player.weapon
+	player = get_tree().get_first_node_in_group("Player")
 	#改成一般形态
 
 func _up_player_data_ui_data() -> void:
@@ -54,6 +58,8 @@ func _up_player_data_ui_data() -> void:
 	vector_up.text = "矢量回复：%s" %playerstate.vector_up_speed
 	vector_spend.text = "矢量消耗：%s" %playerstate.vector_spend
 	coll_damage.text = "接触伤害：%s" %playerstate.collision_damage
+
+
 func _up_weapon_data_ui_data() -> void:
 	if weaponstate is Bullet:
 		damage.text = "伤害：%s" %weaponstate.damage

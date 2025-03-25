@@ -2,29 +2,54 @@ class_name PlayerState
 extends CharacterState
 # TODO 改成资源
 
+
+signal PlayerState_changed
 #头像加载
 
 @export_group("头像")
 @export var sprite_2d: Texture2D
 
 @export_group("速度相关")
-@export var acc_speed :float
-@export var max_speed : float
-@export var spint_speed :float
+@export var acc_speed :float:
+	set(v):
+		acc_speed = v
+		PlayerState_changed.emit()
+@export var max_speed : float:
+	set(v):
+		max_speed = v
+		PlayerState_changed.emit()
+@export var spint_speed :float:
+	set(v):
+		spint_speed = v
+		PlayerState_changed.emit()
 
 
 @export_group("等级相关")
-@export var max_exp :float = 100.0
+@export var max_exp :float = 100.0:
+	set(v):
+		max_exp = v
+		PlayerState_changed.emit()
 
 @export_group("矢量值相关")
-@export var vector_up_speed :float = 5
-@export var vector_spend :float = 1
-@export var max_vector :float = 100
-
+@export var vector_up_speed :float = 5:
+	set(v):
+		vector_up_speed = v
+		PlayerState_changed.emit()
+@export var vector_spend :float = 1:
+	set(v):
+		vector_spend = v
+		PlayerState_changed.emit()
+@export var max_vector :float = 100:
+	set(v):
+		max_vector = v
+		PlayerState_changed.emit()
+	
 @export_group("碰撞伤害")
-@export var collision_damage :float = 100
+@export var collision_damage :float = 20:
+	set(v):
+		collision_damage = v
+		PlayerState_changed.emit()
 
-signal PlayerState_changed
 
 #生命值系统
 var health :float :

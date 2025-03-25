@@ -34,7 +34,6 @@ var aim_position :Vector2
 
 func _ready() -> void:
 	player_property = init_player_property.return_resource_copy() as PlayerState
-	hurtbox.damage = -player_property.collision_damage
 
 func _process(_delta: float) -> void:
 	pass
@@ -79,6 +78,8 @@ func take_accspeed(amount:float) -> void:
 
 func take_coll_damage(amount:float) -> void:
 	player_property.collision_damage += amount
+	hurtbox.damage = -player_property.collision_damage
+	
 
 func take_max_health(amount:float) -> void:
 	player_property.max_health += amount

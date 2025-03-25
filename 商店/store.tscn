@@ -128,6 +128,7 @@ size_flags_vertical = 3
 theme_override_constants/separation = 50
 
 [node name="V2" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_hr8c2")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
