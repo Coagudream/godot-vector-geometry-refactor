@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dmu6nxhcpkiwn"]
+[gd_scene load_steps=11 format=3 uid="uid://dmu6nxhcpkiwn"]
 
 [ext_resource type="Script" uid="uid://ci7ddmpk1s5kd" path="res://商店/store.gd" id="1_if7gn"]
 [ext_resource type="PackedScene" uid="uid://xxhqof0jcdmq" path="res://UI/玩家属性/ui_sidebar.tscn" id="2_hr8c2"]
@@ -7,6 +7,17 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_if7gn"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ybgys"]
+bg_color = Color(0.359069, 0.359069, 0.359069, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myyct"]
 border_width_left = 5
@@ -19,7 +30,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ybgys"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08dc2"]
 bg_color = Color(0.359069, 0.359069, 0.359069, 1)
 border_width_left = 5
 border_width_top = 5
@@ -99,8 +110,9 @@ layout_mode = 2
 size_flags_horizontal = 8
 focus_mode = 0
 theme_override_font_sizes/font_size = 46
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ybgys")
 theme_override_styles/hover = SubResource("StyleBoxFlat_myyct")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ybgys")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_08dc2")
 theme_override_styles/normal = SubResource("StyleBoxFlat_hr8c2")
 text = "刷新()"
 icon_alignment = 1
@@ -117,7 +129,7 @@ size_flags_horizontal = 8
 focus_mode = 0
 theme_override_font_sizes/font_size = 46
 theme_override_styles/hover = SubResource("StyleBoxFlat_myyct")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ybgys")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_08dc2")
 theme_override_styles/normal = SubResource("StyleBoxFlat_hr8c2")
 text = "下一回合"
 icon_alignment = 1
