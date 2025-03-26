@@ -8,9 +8,7 @@ extends Node
 @onready var fire_point_node: Node = $FirePoint
 
 
-@export var icon_center_radius :float:
-	set(v):
-		icon_center_radius = v
+@export var icon_center_radius :float
 
 @export var detection_radius:float:
 	set(v):

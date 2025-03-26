@@ -46,8 +46,20 @@ var player:Player:
 		playerstate = player.player_property
 		weaponstate = player.weapon
 
+enum CURRENT_STATE{SHOW,HIDE}
+var current_state :CURRENT_STATE
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("hide_sidebar") and current_state == CURRENT_STATE.HIDE:
+		self.show()
+		current_state = CURRENT_STATE.SHOW
+	elif event.is_action_pressed("hide_sidebar") and current_state == CURRENT_STATE.SHOW:
+		self.hide()
+		current_state = CURRENT_STATE.HIDE
+
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
+	current_state = CURRENT_STATE.HIDE
 	#改成一般形态
 
 func _up_player_data_ui_data() -> void:

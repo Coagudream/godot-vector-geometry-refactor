@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ruvl6e23h7xk"]
+[gd_scene load_steps=8 format=3 uid="uid://ruvl6e23h7xk"]
 
 [ext_resource type="PackedScene" uid="uid://bw5r1by4cl8ll" path="res://实体/玩家/类/player.tscn" id="1_qlu44"]
 [ext_resource type="Script" uid="uid://b73rkjjvr603n" path="res://实体/玩家/方块/square.gd" id="2_76or4"]
 [ext_resource type="Resource" uid="uid://d71ix1kakhvx" path="res://实体/玩家/方块/square.tres" id="3_arxln"]
 [ext_resource type="PackedScene" uid="uid://etnd1jjflxeh" path="res://通用/系统/武器系统/远程/发射器/square_fire_point.tscn" id="4_76or4"]
+[ext_resource type="Resource" uid="uid://c2nsv8qi4h1ox" path="res://实体/子弹/square_buttle.tres" id="5_0vd0p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_76or4"]
 size = Vector2(126, 125)
@@ -44,6 +45,7 @@ offset_bottom = 64.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_arxln")
 
 [node name="SquareFirePoint" parent="." index="2" instance=ExtResource("4_76or4")]
+bullet_resource = ExtResource("5_0vd0p")
 
 [node name="PlayerCamera" parent="." index="3"]
 physics_interpolation_mode = 1

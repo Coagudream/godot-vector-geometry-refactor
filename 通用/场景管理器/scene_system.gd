@@ -1,27 +1,24 @@
 extends CanvasLayer
 
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-enum Scenes {
-	SCENE_MAIN,
-	SCENE_CESHI,
+var SCENES :Dictionary[String,String] = {
+	"main_ui":"res://UI/主UI场景/main.tscn",
+	"world":"res://战斗场/world.tscn"
 }
 
-@export var scenes :Array[PackedScene]
 
-var previous_scene : PackedScene
-var current_scene : PackedScene
-
-func in_new_scene(scene_index:Scenes):
-	animation_player.play("scene_in")
-	await animation_player.animation_finished
+func from_old_to_new_sences(current_scenes:String,next_sences:String) -> void:
+	if current_scenes == next_sences:
+		return
 	
-	current_scene = scenes[scene_index]
+	if not SCENES.has(next_sences):
+		return
 	
-	get_tree().change_scene_to_packed(scenes[scene_index])
+	var load_path : String = SCENES[next_sences]
 	
-	animation_player.play("scene_out")
-
-
-func set_old_scene(scene_index:Scenes):
-	current_scene = scenes[scene_index]
+	if not ResourceLoader.exists(load_path):
+		return
+	
+	ResourceLoader.load_threaded_request(load_path,"",true)
+	
+	get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(load_path))

@@ -59,6 +59,7 @@ position = Vector2(-1092, -486)
 
 [node name="Core" parent="." instance=ExtResource("2_rchh0")]
 scale = Vector2(0.7, 0.7)
+core_resource = null
 
 [node name="BoundaryManager" parent="." instance=ExtResource("1_372nk")]
 unique_name_in_owner = true
@@ -71,6 +72,7 @@ layer = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="V2" parent="UiLayer" instance=ExtResource("8_id4f2")]
+visible = false
 metadata/_edit_use_anchors_ = true
 
 [node name="Fps" type="Label" parent="UiLayer"]

@@ -27,6 +27,7 @@ var rect: Rect2 :
 ##初始化
 func _ready() -> void:
 	rect = Rect2(INIT_RECT_POSITION,INIT_RECT_SIZE)
+	Events.round_end.connect(restore_the_boundary)
 
 
 ##移动全部边界（+/-表示边界方向）（正扩负缩）（事件）
@@ -59,3 +60,13 @@ func move_left_boundary(move_distance:float,time:float) -> void:
 func move_right_boundary(move_distance:float,time:float) -> void:
 	var tween: Tween = create_tween()
 	tween.tween_property(right,"global_position",Vector2(right.global_position.x+move_distance,left.global_position.y),time)
+
+##恢复边界函数
+func restore_the_boundary(time:float=3.0) -> void:
+	var tween: Tween = create_tween()
+	tween.set_parallel(true)
+	tween.tween_property(up,"global_position",Vector2(up.global_position.x,INIT_RECT_POSITION.y),time)
+	tween.tween_property(down,"global_position",Vector2(down.global_position.x,INIT_RECT_END.y),time)
+	tween.tween_property(left,"global_position",Vector2(INIT_RECT_POSITION.x,left.global_position.y),time)
+	tween.tween_property(right,"global_position",Vector2(INIT_RECT_END.x,left.global_position.y),time)
+	rect = Rect2(INIT_RECT_POSITION,INIT_RECT_SIZE)

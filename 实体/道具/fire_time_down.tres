@@ -1,12 +1,10 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://d8raifjf6yrt"]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d8raifjf6yrt"]
 
-[ext_resource type="Texture2D" uid="uid://dcb8dlrgkjeb5" path="res://升级选择/艺术/speed_up.png" id="1_5hkkr"]
 [ext_resource type="Script" uid="uid://qyqah2dmaik7" path="res://实体/道具/fire_time_down.gd" id="1_ewajm"]
 
 [resource]
 script = ExtResource("1_ewajm")
-name = "超载"
-icon = ExtResource("1_5hkkr")
+name = "超频"
 tooltip = "降低开火0.5间隔"
 type = 4
 gam_stone_spend = 20

@@ -13,7 +13,8 @@ enum STATE {no_select,selected}
 			await ready
 		core_resource = v
 		#动画名称要和Item内的名称配合起来
-		player_item(core_resource.anim_name)
+		if core_resource:
+			player_item(core_resource.anim_name)
 
 @export var round_radius :float = 500.0
 @export var max_health :float = 500.0

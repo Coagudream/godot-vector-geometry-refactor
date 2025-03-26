@@ -6,7 +6,7 @@ signal round_end  ##回合结束
 signal request_next_round_start  ##请求下一个回合开始
 
 #回合事件
-signal requesr_round_events  ##请求回合事件
+signal request_round_events  ##请求回合事件
 signal round_events_ui(event:String,current:EventsManager.GRADE)  ##回合事件UI显示
 
 #玩家

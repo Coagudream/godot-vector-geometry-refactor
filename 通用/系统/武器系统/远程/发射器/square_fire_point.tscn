@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://etnd1jjflxeh"]
+[gd_scene load_steps=5 format=3 uid="uid://etnd1jjflxeh"]
 
 [ext_resource type="Script" uid="uid://ym13sfbwawut" path="res://通用/系统/武器系统/远程/发射器/square_fire_point.gd" id="1_favro"]
-[ext_resource type="Resource" uid="uid://c2nsv8qi4h1ox" path="res://实体/子弹/square_buttle.tres" id="2_eqrx5"]
 [ext_resource type="PackedScene" uid="uid://dgkt3w1gxf536" path="res://通用/系统/武器系统/远程/发射器/marker_2d.tscn" id="3_af2be"]
 [ext_resource type="PackedScene" uid="uid://32a7581xdoh5" path="res://着色/圆环波动/fluctuate.tscn" id="4_6x7n0"]
 
@@ -12,7 +11,6 @@ radius = 270.0
 script = ExtResource("1_favro")
 icon_center_radius = 125.0
 detection_radius = 300.0
-bullet_resource = ExtResource("2_eqrx5")
 
 [node name="Detection" type="Area2D" parent="."]
 unique_name_in_owner = true

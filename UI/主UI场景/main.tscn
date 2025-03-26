@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxi7l2tmu7x5e"]
+
+[ext_resource type="Script" uid="uid://bgydoc54eg7d6" path="res://UI/主UI场景/main.gd" id="1_lsm2w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r733d"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lsm2w")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r733d")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 45
+
+[node name="GameStart" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 119.665)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "开始游戏"
+
+[node name="GameContinue" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 119.665)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "继续游戏"
+
+[node name="GameMapKey" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 119.665)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "游戏图鉴"
+
+[node name="GameSet" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 119.665)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "游戏设置"
+
+[node name="GameQuit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 119.665)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "退出游戏"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/GameStart" to="." method="_on_game_start_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/GameContinue" to="." method="_on_game_continue_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/GameMapKey" to="." method="_on_game_map_key_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/GameSet" to="." method="_on_game_set_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/GameQuit" to="." method="_on_game_quit_pressed"]

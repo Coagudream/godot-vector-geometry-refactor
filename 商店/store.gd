@@ -42,10 +42,10 @@ func show_store() -> void:
 
 ##刷新逻辑更新
 func refresh_updata() -> void:
-	refresh_buuton.text = "刷新(%s)" %refresh_gem_amount
-	refresh_gem_amount += int(25*(log(refresh_times+3)/log(10)))
-	refresh_times += 1
 	run_state.run_state_.gem_amount -= refresh_gem_amount
+	refresh_times += 1
+	refresh_gem_amount += int(25*(log(refresh_times+3)/log(10)))
+	refresh_buuton.text = "刷新(%s)" %refresh_gem_amount
 	updata_button_atate()
 
 ##刷新道具卡牌

@@ -14,8 +14,9 @@ func add_enemies(current_round:int) -> void:
 	for i in range(10):
 		add_enemy(current_round)
 
+
 ##添加一个敌人
-func add_enemy(_current_round:int) -> void:
+func add_enemy(current_round:int) -> void:
 	var new_enemy_ordinary_factory:MonsterOrdinaryFactory = MonsterOrdinaryFactory.new()
 	var new_enemy =  new_enemy_ordinary_factory.create_enemy("min_genmetry")
 	random_ememies_position(new_enemy)
