@@ -39,17 +39,20 @@ func _ready() -> void:
 ##请求事件系统(保证随机性)
 func request_round_event(current_round:int) -> void:
 	await get_tree().create_timer(AWAIT_EVENTS).timeout
-	if current_round == 1:
-		return
-	if current_round == 2:
-		random_events_and_grade()
-		print("当前回合数%s" %current_round)
-	if 1 == randi_range(0,2) :
-		random_events_and_grade()
-		return
-	_not_occur_event += 1
-	if _not_occur_event == MAX_EVENT_INTERVAL:
-		random_events_and_grade()
+	match current_round:
+		1:
+			return
+		2:
+			random_events_and_grade()
+			print("当前回合数%s" %current_round)
+			return
+		_:
+			if 1 == randi_range(0,2) :
+				random_events_and_grade()
+				return
+			_not_occur_event += 1
+			if _not_occur_event == MAX_EVENT_INTERVAL:
+				random_events_and_grade()
 
 
 ##事件权重

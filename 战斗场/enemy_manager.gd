@@ -11,6 +11,7 @@ func _ready() -> void:
 
 ##添加一群敌人
 func add_enemies(current_round:int) -> void:
+	# TODO 添加敌人需要一波一波的添加（第一波等待
 	for i in range(10):
 		add_enemy(current_round)
 
