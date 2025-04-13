@@ -85,7 +85,6 @@ hide_sidebar={
 
 [physics]
 
-common/physics_ticks_per_second=48
 2d/physics_engine="GodotPhysics2D"
 common/physics_interpolation=true
 
