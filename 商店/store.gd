@@ -9,6 +9,7 @@ extends PanelContainer
 const ITEMS = preload("res://商店/items.tscn")
 const ITEMS_AMOUNT:int = 4
 
+# TODO 改成工厂模式（单独的类）
 const FIRE_TIME_DOWN = preload("res://实体/道具/fire_time_down.tres")
 const COLL_DAMAGE_UP = preload("res://实体/道具/coll_damage_up.tres")
 
@@ -38,7 +39,6 @@ func show_store() -> void:
 	v_2.player = player
 	refresh_items()
 	show()
-
 
 ##刷新逻辑更新
 func refresh_updata() -> void:

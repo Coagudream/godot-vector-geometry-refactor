@@ -31,7 +31,7 @@ var is_fire:bool = false
 var bullet: Bullet
 var in_attack_interval:float
 
-var point_target_node :Node2D
+var point_target_node :Node2D #始终最近敌人节点
 var array_area : Array[Area2D]:
 	get(): return detection_radiu.get_overlapping_areas()
 

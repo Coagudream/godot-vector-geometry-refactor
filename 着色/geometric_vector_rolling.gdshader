@@ -37,15 +37,15 @@ void fragment() {
     vec2 scrolled_uv = UV + vec2(TIME * scroll_speed, TIME * scroll_speed * 0.5);
     vec2 tiled_uv = fract(scrolled_uv * shape_scale * density);
     vec2 cell_id = floor(scrolled_uv * shape_scale * density);
-    
+
     // 只基于单元格ID生成随机形状类型
     float rand = random(cell_id);
     float shape_type = floor(rand * 3.0); // 0:圆, 1:三角, 2:方形
-    
+
     // 固定位置为中心，固定大小
     vec2 pos = tiled_uv - vec2(0.5); // 居中
     float size = shape_size;
-    
+
     // 计算形状
     float shape = 0.0;
     if (shape_type == 0.0) {
@@ -55,10 +55,10 @@ void fragment() {
     } else {
         shape = square(pos, vec2(0.0), size);
     }
-    
+
     // 混合颜色
     vec4 final_color = bg_color;
     final_color = mix(final_color, shape_color, shape);
-    
+
     COLOR = final_color;
 }

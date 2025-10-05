@@ -1,4 +1,4 @@
-extends Player
+extends Player 
 
 @onready var label: Label = $Label
 @onready var square_collision: CollisionShape2D = $SquareCollision

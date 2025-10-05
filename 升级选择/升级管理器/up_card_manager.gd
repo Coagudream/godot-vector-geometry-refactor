@@ -29,7 +29,7 @@ func _ready() -> void:
 func player_lv_up_time() -> void:
 	player_lv_up_times += 1
 
-##回合结束展示多少张卡牌(按照升级次数)
+##回合结束展示多少次卡牌(按照升级次数)
 func round_end_show_times() -> void:
 	for i in range(player_lv_up_times):
 		show_card_group()

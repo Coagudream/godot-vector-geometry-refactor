@@ -18,12 +18,12 @@ float noise(vec2 uv) {
     vec2 i = floor(uv);
     vec2 f = fract(uv);
     vec2 u = f * f * (3.0 - 2.0 * f);
-    
+
     float a = random(i + vec2(0.0, 0.0));
     float b = random(i + vec2(1.0, 0.0));
     float c = random(i + vec2(0.0, 1.0));
     float d = random(i + vec2(1.0, 1.0));
-    
+
     return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);
 }
 
@@ -49,28 +49,28 @@ void fragment() {
     // 计算缩放后的UV坐标
     vec2 scaled_uv = UV * noise_scale;
     vec2 grain_uv = UV * grain_scale;
-    
+
     // 生成基础纸张噪声
     float paper_noise = fbm(scaled_uv);
-    
+
     // 添加纤维纹理
     float fiber_noise = fbm(scaled_uv * vec2(5.0, 0.5)) * fiber_strength;
-    
+
     // 组合基础纹理
     float texture_value = paper_noise * (1.0 - fiber_strength) + fiber_noise;
-    
+
     // 生成颗粒噪声
     float grain = grain_noise(grain_uv) * grain_strength;
-    
+
     // 计算最终颜色
     vec3 final_color = paper_color.rgb;
-    
+
     // 添加粗糙度影响
     final_color = mix(final_color, final_color * (1.0 - roughness), texture_value);
-    
+
     // 添加颗粒效果
     final_color = mix(final_color, final_color * (1.0 - grain), grain_strength);
-    
+
     // 输出结果
     COLOR = vec4(final_color, paper_color.a);
 }

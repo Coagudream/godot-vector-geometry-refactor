@@ -80,7 +80,6 @@ func take_accspeed(amount:float) -> void:
 func take_coll_damage(amount:float) -> void:
 	player_property.collision_damage += amount
 	hurtbox.damage = -player_property.collision_damage
-	
 
 func take_max_health(amount:float) -> void:
 	player_property.max_health += amount
