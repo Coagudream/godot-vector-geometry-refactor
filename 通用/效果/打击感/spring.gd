@@ -1,8 +1,6 @@
 class_name Spring2D
 extends RefCounted
 
-
-
 func spring(node:Node2D,is_fixed_aspect_ratio:bool = true,strength:float = 1,amount:int=4,duration:float = 0.4) -> void:
 	
 	var original_scale :Vector2 = node.scale

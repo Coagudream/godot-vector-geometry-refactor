@@ -68,10 +68,10 @@ func add_buff(buff_design:BuffDesign) -> void:
 	#buff不存在
 	else:
 		buff_design.cur_stack = 1 #这里修改添加时的层数
-		buff_design.duratio_time = buff_design.buff_data.duration
+		buff_design.duratio_time = buff_design.buff_data.duration #这里修改添加时的初始时间
 		buff_design.buff_data.on_create.Apply(buff_design)
 		bufflist.append(buff_design)
-		#buff_design.tick_time = buff_design.buff_data.tick_time   回调时间控制
+		buff_design.tick_time = buff_design.buff_data.tick_time  # 回调时间控制
 		
 		insertion_sort(bufflist) #buff排序
 

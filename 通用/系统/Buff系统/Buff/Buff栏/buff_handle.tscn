@@ -1,63 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://cyi21t6uiy61u"]
+[gd_scene format=3 uid="uid://cyi21t6uiy61u"]
 
 [ext_resource type="Script" uid="uid://8ytdqijrceqa" path="res://通用/系统/Buff系统/Buff基类/BuffHandle.gd" id="1_11djl"]
 [ext_resource type="PackedScene" uid="uid://dqdrrbfoxbito" path="res://通用/系统/Buff系统/Buff/类/buff_design.tscn" id="2_tcmah"]
 
-[node name="BuffHandle" type="GridContainer"]
+[node name="BuffHandle" type="GridContainer" unique_id=2005128946]
 offset_right = 348.0
 offset_bottom = 128.0
 columns = 8
 script = ExtResource("1_11djl")
 
-[node name="BuffDesign" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign" parent="." unique_id=69961228 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign2" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign2" parent="." unique_id=2083741381 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign3" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign3" parent="." unique_id=1356502451 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign4" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign4" parent="." unique_id=403806110 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign5" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign5" parent="." unique_id=1666291333 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign6" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign6" parent="." unique_id=1150843901 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign7" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign7" parent="." unique_id=1966490661 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign8" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign8" parent="." unique_id=2133209203 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign9" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign9" parent="." unique_id=511910867 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign10" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign10" parent="." unique_id=314002987 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign11" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign11" parent="." unique_id=624890768 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign12" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign12" parent="." unique_id=1892875250 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign13" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign13" parent="." unique_id=1568041103 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign14" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign14" parent="." unique_id=1869011450 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign15" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign15" parent="." unique_id=817861915 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign16" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign16" parent="." unique_id=510596010 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
-[node name="BuffDesign17" parent="." instance=ExtResource("2_tcmah")]
+[node name="BuffDesign17" parent="." unique_id=991200174 instance=ExtResource("2_tcmah")]
 layout_mode = 2
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]

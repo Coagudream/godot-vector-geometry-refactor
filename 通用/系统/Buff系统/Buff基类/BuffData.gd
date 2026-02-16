@@ -1,6 +1,8 @@
 class_name BuffData
 extends Resource
 
+#资源数据层->一个逻辑层->管理多个逻辑层->UI层
+
 @export_group("Buff基本信息")
 @export var id :int     ##ID
 @export var name:String  ##名称
@@ -23,9 +25,6 @@ extends Resource
 
 @export_group("Buff减层时计算时间")
 @export_enum('Clear','Reduce') var buff_remove_stack_updata_enum: String ##Clear:Buff层数消失时时间完全消失   Reduce:Buff层数-1且时间刷新
-
-
-
 
 
 @export_group("Buff回调点")

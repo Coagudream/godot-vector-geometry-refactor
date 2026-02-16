@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dmu6nxhcpkiwn"]
+[gd_scene format=3 uid="uid://dmu6nxhcpkiwn"]
 
 [ext_resource type="Script" uid="uid://ci7ddmpk1s5kd" path="res://商店/store.gd" id="1_if7gn"]
 [ext_resource type="PackedScene" uid="uid://xxhqof0jcdmq" path="res://UI/玩家属性/ui_sidebar.tscn" id="2_hr8c2"]
@@ -56,7 +56,7 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
-[node name="Store" type="PanelContainer"]
+[node name="Store" type="PanelContainer" unique_id=1300158837]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -65,33 +65,33 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_if7gn")
 script = ExtResource("1_if7gn")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1306981458]
 layout_mode = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1404035654]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1202612106]
 layout_mode = 2
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1129401563]
 custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1082584149]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=1577392982]
 custom_minimum_size = Vector2(7.79, 0)
 layout_mode = 2
 texture = ExtResource("2_rbvjg")
 stretch_mode = 2
 
-[node name="GemAmount" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
+[node name="GemAmount" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=1535243980]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
@@ -99,11 +99,11 @@ text = "123"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=746969704]
 custom_minimum_size = Vector2(850, 0)
 layout_mode = 2
 
-[node name="Refresh" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Refresh" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=818730172]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(208.365, 0)
 layout_mode = 2
@@ -117,11 +117,11 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_ybgys")
 text = "刷新()"
 icon_alignment = 1
 
-[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=19984590]
 custom_minimum_size = Vector2(90.53, 0)
 layout_mode = 2
 
-[node name="NextRound" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="NextRound" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1037962408]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(208.365, 0)
 layout_mode = 2
@@ -134,48 +134,48 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_myyct")
 text = "下一回合"
 icon_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=580597921]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 50
 
-[node name="V2" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_hr8c2")]
+[node name="V2" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=949498377 instance=ExtResource("2_hr8c2")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1797513062]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_rbvjg")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer" unique_id=1403215229]
 layout_mode = 2
 theme_override_constants/margin_top = 80
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer" unique_id=1885768504]
 layout_mode = 2
 theme_override_constants/separation = 80
 
-[node name="ItemsContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="ItemsContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=242693841]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 20
 
-[node name="Items" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ItemsContainer" instance=ExtResource("4_rbvjg")]
+[node name="Items" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ItemsContainer" unique_id=1334772164 instance=ExtResource("4_rbvjg")]
 layout_mode = 2
 
-[node name="Items2" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ItemsContainer" instance=ExtResource("4_rbvjg")]
+[node name="Items2" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ItemsContainer" unique_id=600885896 instance=ExtResource("4_rbvjg")]
 layout_mode = 2
 
-[node name="Items3" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ItemsContainer" instance=ExtResource("4_rbvjg")]
+[node name="Items3" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ItemsContainer" unique_id=1942571408 instance=ExtResource("4_rbvjg")]
 layout_mode = 2
 
-[node name="Items4" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ItemsContainer" instance=ExtResource("4_rbvjg")]
+[node name="Items4" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ItemsContainer" unique_id=1671702465 instance=ExtResource("4_rbvjg")]
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1630809035]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

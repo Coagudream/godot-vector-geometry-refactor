@@ -11,10 +11,10 @@ config_version=5
 [application]
 
 config/name="重构：矢量几何"
+config/tags=PackedStringArray("项目")
 run/main_scene="uid://bxi7l2tmu7x5e"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
-config/tags=PackedStringArray("项目")
 
 [autoload]
 
