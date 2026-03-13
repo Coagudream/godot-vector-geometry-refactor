@@ -2,7 +2,6 @@ class_name RunState
 extends HBoxContainer
 
 @onready var gem_amount: Label = %GemAmount
-
 @export var run_state:RunStateS
 
 var run_state_ :RunStateS

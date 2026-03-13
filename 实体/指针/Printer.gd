@@ -10,7 +10,6 @@ extends Line2D
 # BUG 这个有BUG，无法实时更新碰撞数组，初步判是剑杆物理引擎的问题
 var contact_area:Array[Area2D]
 
-
 func _process(_delta: float) -> void:
 	#print("指针" ,contact_area)
 	set_point_position(1,target_position)

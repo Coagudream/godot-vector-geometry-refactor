@@ -1,11 +1,10 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bim8vo4ibl8bo"]
+[gd_resource type="Resource" format=3 uid="uid://bim8vo4ibl8bo"]
 
 [ext_resource type="Script" uid="uid://cg8tcfrx8m1wa" path="res://实体/道具/coll_damage_up.gd" id="2_885sd"]
 
 [resource]
 script = ExtResource("2_885sd")
-name = "长刺"
+name = "荆棘"
 tooltip = "碰撞伤害+10"
-type = 0
 gam_stone_spend = 10
 metadata/_custom_type_script = "uid://cx466qf28qv3n"

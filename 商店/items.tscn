@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bocmkmbjig8q8"]
+[gd_scene format=3 uid="uid://bocmkmbjig8q8"]
 
 [ext_resource type="Texture2D" uid="uid://dcb8dlrgkjeb5" path="res://升级选择/艺术/speed_up.png" id="1_4vk2l"]
 [ext_resource type="StyleBox" uid="uid://dd5vbx4b3iifh" path="res://主题/common.tres" id="1_kuaaw"]
@@ -42,7 +42,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="Items" type="PanelContainer"]
+[node name="Items" type="PanelContainer" unique_id=1210640612]
 custom_minimum_size = Vector2(300, 390)
 offset_right = 186.0
 offset_bottom = 241.0
@@ -50,23 +50,23 @@ theme_override_styles/panel = ExtResource("1_kuaaw")
 script = ExtResource("2_2cypt")
 items = ExtResource("3_5ji66")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=643199437]
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=551812860]
 layout_mode = 2
 
-[node name="Icon" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+[node name="Icon" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1278424697]
 unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("1_4vk2l")
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1746195063]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
@@ -74,7 +74,7 @@ text = "超载"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ItemTooltip" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+[node name="ItemTooltip" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1289250928]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
@@ -83,12 +83,12 @@ text = "阿斯蒂芬阿萨放大发啊"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1901331811]
 layout_mode = 2
 theme_override_constants/separation = 25
 alignment = 1
 
-[node name="Lock" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Lock" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=22340316]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 51)
 layout_mode = 2
@@ -98,7 +98,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_myyct")
 toggle_mode = true
 text = "锁定"
 
-[node name="Buy" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Buy" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=312405265]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 51)
 layout_mode = 2

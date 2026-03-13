@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://duheea1ybf20f"]
+[gd_scene format=3 uid="uid://duheea1ybf20f"]
 
 [ext_resource type="Script" uid="uid://cqkmejblh76q" path="res://实体/核心/基座/core.gd" id="1_1evbl"]
 [ext_resource type="Texture2D" uid="uid://cvj0rniidqqcx" path="res://实体/核心/基座/core_art/core1.png" id="1_6kfih"]
@@ -136,36 +136,37 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_5nkr3"]
 radius = 129.468
 
-[node name="Core" type="StaticBody2D" groups=["Core"]]
+[node name="Core" type="StaticBody2D" unique_id=1344402237 groups=["Core"]]
 collision_layer = 256
 collision_mask = 0
 script = ExtResource("1_1evbl")
 core_resource = ExtResource("2_5nkr3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=24331310]
 shape = SubResource("CircleShape2D_oup07")
 
-[node name="Round" parent="." instance=ExtResource("3_oup07")]
+[node name="Round" parent="." unique_id=278785352 instance=ExtResource("3_oup07")]
 
-[node name="Group" type="Node2D" parent="."]
+[node name="Group" type="Node2D" parent="." unique_id=257489153]
 
-[node name="Base" type="AnimatedSprite2D" parent="Group"]
+[node name="Base" type="AnimatedSprite2D" parent="Group" unique_id=131432131]
 sprite_frames = SubResource("SpriteFrames_qdgqd")
 animation = &"core"
 autoplay = "core"
 frame_progress = 0.928704
 
-[node name="Item" type="AnimatedSprite2D" parent="Group"]
+[node name="Item" type="AnimatedSprite2D" parent="Group" unique_id=1589133332]
 unique_name_in_owner = true
 sprite_frames = ExtResource("32_u26yo")
-animation = &"empty"
+animation = &"sawtooth"
+frame_progress = 0.6171244
 
-[node name="Hitbox" type="Area2D" parent="Group" node_paths=PackedStringArray("target")]
+[node name="Hitbox" type="Area2D" parent="Group" unique_id=1554644672 node_paths=PackedStringArray("target")]
 collision_layer = 1024
 collision_mask = 64
 script = ExtResource("34_5nkr3")
 target = NodePath("../..")
 metadata/_custom_type_script = "uid://bvf6u5dqlh61t"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Group/Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Group/Hitbox" unique_id=1858262788]
 shape = SubResource("CircleShape2D_5nkr3")

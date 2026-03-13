@@ -2,17 +2,24 @@ class_name EnemyManager
 extends Node2D
 
 var bounder_rect :Rect2
+var enemy_count:int :
+	get():
+		return get_tree().get_nodes_in_group("Enemy").size()
+
 
 func _ready() -> void:
 	Events.round_end.connect(remove_all_enemy)
 	Events.round_start.connect(add_enemies)
 	Events.game_boundary_changed.connect(func(rect:Rect2): bounder_rect = rect)
 
+func _physics_process(_delta: float) -> void:
+	if enemy_count <= 0:
+		add_enemies(1)
 
 ##添加一群敌人
 func add_enemies(current_round:int) -> void:
-	# TODO 添加敌人需要一波一波的添加（第一波等待
-	for i in range(10):
+	# TODO 添加敌人需要一波一波的添加（第一波等待）
+	for i in range(current_round):
 		add_enemy(current_round)
 
 

@@ -1,10 +1,91 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxi7l2tmu7x5e"]
+[gd_scene format=3 uid="uid://bxi7l2tmu7x5e"]
 
 [ext_resource type="Script" uid="uid://bgydoc54eg7d6" path="res://UI/主UI场景/main.gd" id="1_lsm2w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r733d"]
+bg_color = Color(6.738305e-07, 0.2833404, 0.3757283, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
-[node name="Main" type="Control"]
+[sub_resource type="LabelSettings" id="LabelSettings_3dowm"]
+font_size = 150
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(7, 7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmam0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_offset = Vector2(7, 7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dowm"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxekk"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_offset = Vector2(7, 7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsmk6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_offset = Vector2(7, 7)
+
+[node name="Main" type="Control" unique_id=994262030]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +94,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lsm2w")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=666455564]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,52 +103,74 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_r733d")
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=792839209]
 layout_mode = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=287360206]
+layout_mode = 2
+theme_override_constants/separation = 303
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=1265034654]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "矢量几何"
+label_settings = SubResource("LabelSettings_3dowm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=1072377357]
 custom_minimum_size = Vector2(384, 0)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
+size_flags_horizontal = 4
+size_flags_vertical = 8
 theme_override_constants/separation = 45
 
-[node name="GameStart" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="GameStart" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=845995358]
 custom_minimum_size = Vector2(0, 119.665)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_vmam0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3dowm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cxekk")
 text = "开始游戏"
 
-[node name="GameContinue" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="GameContinue" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=918581102]
+visible = false
 custom_minimum_size = Vector2(0, 119.665)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "继续游戏"
 
-[node name="GameMapKey" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="GameMapKey" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=314612811]
+visible = false
 custom_minimum_size = Vector2(0, 119.665)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "游戏图鉴"
 
-[node name="GameSet" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="GameSet" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1306279869]
+visible = false
 custom_minimum_size = Vector2(0, 119.665)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "游戏设置"
 
-[node name="GameQuit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="GameQuit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer" unique_id=1086645773]
 custom_minimum_size = Vector2(0, 119.665)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_wsmk6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3dowm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cxekk")
 text = "退出游戏"
 
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/GameStart" to="." method="_on_game_start_pressed"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/GameContinue" to="." method="_on_game_continue_pressed"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/GameMapKey" to="." method="_on_game_map_key_pressed"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/GameSet" to="." method="_on_game_set_pressed"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/GameQuit" to="." method="_on_game_quit_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/GameStart" to="." method="_on_game_start_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/GameContinue" to="." method="_on_game_continue_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/GameMapKey" to="." method="_on_game_map_key_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/GameSet" to="." method="_on_game_set_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer2/VBoxContainer/GameQuit" to="." method="_on_game_quit_pressed"]

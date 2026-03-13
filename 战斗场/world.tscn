@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://634x8bt6473u"]
+[gd_scene format=3 uid="uid://634x8bt6473u"]
 
 [ext_resource type="Script" uid="uid://dehoxo5pm174k" path="res://战斗场/events_manager.gd" id="1_2sqtf"]
 [ext_resource type="PackedScene" uid="uid://b02qkgrdocqhs" path="res://实体/边界/boundary_group.tscn" id="1_372nk"]
@@ -39,43 +39,43 @@ glow_strength = 0.8
 glow_bloom = 0.1
 glow_blend_mode = 0
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" unique_id=2143754868]
 metadata/_edit_vertical_guides_ = [-3000.0, 3000.0]
 metadata/_edit_horizontal_guides_ = [-1717.0, 1717.0]
 
-[node name="EventsManager" type="Node" parent="."]
+[node name="EventsManager" type="Node" parent="." unique_id=2141856135]
 script = ExtResource("1_2sqtf")
 
-[node name="RoundManager" type="Node" parent="."]
+[node name="RoundManager" type="Node" parent="." unique_id=1951274283]
 unique_name_in_owner = true
 script = ExtResource("1_426s4")
 
-[node name="EnemyManager" type="Node2D" parent="."]
+[node name="EnemyManager" type="Node2D" parent="." unique_id=939835931]
 unique_name_in_owner = true
 script = ExtResource("2_eh208")
 
-[node name="Square" parent="." instance=ExtResource("3_eh208")]
+[node name="Square" parent="." unique_id=1729683391 instance=ExtResource("3_eh208")]
 position = Vector2(-1092, -486)
 
-[node name="Core" parent="." instance=ExtResource("2_rchh0")]
+[node name="Core" parent="." unique_id=1685008090 instance=ExtResource("2_rchh0")]
 scale = Vector2(0.7, 0.7)
 core_resource = null
 
-[node name="BoundaryManager" parent="." instance=ExtResource("1_372nk")]
+[node name="BoundaryManager" parent="." unique_id=592000594 instance=ExtResource("1_372nk")]
 unique_name_in_owner = true
 metadata/_edit_lock_ = true
 
-[node name="UiLayer" type="CanvasLayer" parent="."]
+[node name="UiLayer" type="CanvasLayer" parent="." unique_id=186421812]
 layer = 0
 
-[node name="V1" parent="UiLayer" instance=ExtResource("7_2xfnb")]
+[node name="V1" parent="UiLayer" unique_id=1844965731 instance=ExtResource("7_2xfnb")]
 metadata/_edit_use_anchors_ = true
 
-[node name="V2" parent="UiLayer" instance=ExtResource("8_id4f2")]
+[node name="V2" parent="UiLayer" unique_id=1875277374 instance=ExtResource("8_id4f2")]
 visible = false
 metadata/_edit_use_anchors_ = true
 
-[node name="Fps" type="Label" parent="UiLayer"]
+[node name="Fps" type="Label" parent="UiLayer" unique_id=370499608]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -89,7 +89,7 @@ text = "165"
 script = ExtResource("9_yfljp")
 metadata/_edit_use_anchors_ = true
 
-[node name="text" type="Control" parent="UiLayer"]
+[node name="text" type="Control" parent="UiLayer" unique_id=1958222851]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -97,7 +97,7 @@ offset_bottom = 40.0
 script = ExtResource("8_rchh0")
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="UiLayer/text"]
+[node name="Button" type="Button" parent="UiLayer/text" unique_id=174661894]
 process_mode = 3
 layout_mode = 1
 anchors_preset = 2
@@ -112,7 +112,7 @@ focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_rchh0")
 text = "next round"
 
-[node name="Button2" type="Button" parent="UiLayer/text"]
+[node name="Button2" type="Button" parent="UiLayer/text" unique_id=992865015]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -129,7 +129,7 @@ focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_eh208")
 text = "player up card"
 
-[node name="Button3" type="Button" parent="UiLayer/text"]
+[node name="Button3" type="Button" parent="UiLayer/text" unique_id=1785544809]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -146,7 +146,7 @@ focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_eh208")
 text = "player exp up"
 
-[node name="Button4" type="Button" parent="UiLayer/text"]
+[node name="Button4" type="Button" parent="UiLayer/text" unique_id=792450688]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -163,10 +163,10 @@ focus_mode = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_eh208")
 text = "random_evens"
 
-[node name="VisualLayer" type="CanvasLayer" parent="."]
+[node name="VisualLayer" type="CanvasLayer" parent="." unique_id=338992511]
 script = ExtResource("9_rchh0")
 
-[node name="RedSprite" type="ColorRect" parent="VisualLayer"]
+[node name="RedSprite" type="ColorRect" parent="VisualLayer" unique_id=1876809804]
 visible = false
 material = SubResource("ShaderMaterial_rchh0")
 anchors_preset = 15
@@ -176,7 +176,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="RoundDuration" type="Label" parent="VisualLayer"]
+[node name="RoundDuration" type="Label" parent="VisualLayer" unique_id=1301506905]
 unique_name_in_owner = true
 anchors_preset = 5
 anchor_left = 0.5
@@ -190,29 +190,29 @@ text = "40"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RunStateUI" parent="VisualLayer" instance=ExtResource("13_2xfnb")]
+[node name="RunStateUI" parent="VisualLayer" unique_id=878105248 instance=ExtResource("13_2xfnb")]
 offset_left = 672.0
 offset_top = 63.0
 offset_right = 791.0
 offset_bottom = 127.0
 
-[node name="RoundLayer" type="CanvasLayer" parent="."]
+[node name="RoundLayer" type="CanvasLayer" parent="." unique_id=1726718610]
 
-[node name="UpCardManager" parent="RoundLayer" instance=ExtResource("12_426s4")]
+[node name="UpCardManager" parent="RoundLayer" unique_id=1492830144 instance=ExtResource("12_426s4")]
 process_mode = 3
 visible = false
 
-[node name="RoundEventsUI" parent="RoundLayer" instance=ExtResource("14_k11o3")]
+[node name="RoundEventsUI" parent="RoundLayer" unique_id=869075560 instance=ExtResource("14_k11o3")]
 process_mode = 3
 visible = false
 modulate = Color(1, 1, 1, 0)
 mouse_filter = 2
 
-[node name="Store" parent="RoundLayer" instance=ExtResource("16_id4f2")]
+[node name="Store" parent="RoundLayer" unique_id=151851570 instance=ExtResource("16_id4f2")]
 process_mode = 2
 visible = false
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1717724668]
 environment = SubResource("Environment_dwbse")
 
 [connection signal="pressed" from="UiLayer/text/Button" to="UiLayer/text" method="_on_button_pressed"]

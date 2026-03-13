@@ -25,6 +25,14 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("mouse_right"):
 		player_property.vector -= player_property.vector_spend*delta
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("mouse_right"):
+		take_attack_interval(-0.5)
+	
+	if event.is_action_released("mouse_right"):
+		take_attack_interval(0.5)
+
+
 
 func _process(delta: float) -> void:
 	super._process(delta)
