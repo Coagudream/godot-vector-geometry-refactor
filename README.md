@@ -8,6 +8,9 @@
 ## 升级系统
 ![alt text](readme_png/升级.png)
 
+## 事件系统
+![alt text](readme_png/事件.png)
+
 ## 局内
 ![alt text](readme_png/局内.png)
 ![alt text](readme_png/局内2.png)
