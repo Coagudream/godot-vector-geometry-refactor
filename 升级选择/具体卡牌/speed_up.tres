@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://0was8ij4a4x7"]
+[gd_resource type="Resource" format=3 uid="uid://0was8ij4a4x7"]
 
 [ext_resource type="Texture2D" uid="uid://dcb8dlrgkjeb5" path="res://升级选择/艺术/speed_up.png" id="1_kxhif"]
 [ext_resource type="Script" uid="uid://dvm0yarurdt5b" path="res://升级选择/具体卡牌/speed_up.gd" id="2_cov3t"]
@@ -6,6 +6,5 @@
 [resource]
 script = ExtResource("2_cov3t")
 icon = ExtResource("1_kxhif")
-tooltip = ""
 type = 1
 metadata/_custom_type_script = "uid://dlsqev8ps6j4d"

@@ -1,11 +1,11 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d8raifjf6yrt"]
+[gd_resource type="Resource" format=3 uid="uid://d8raifjf6yrt"]
 
 [ext_resource type="Script" uid="uid://qyqah2dmaik7" path="res://实体/道具/fire_time_down.gd" id="1_ewajm"]
 
 [resource]
 script = ExtResource("1_ewajm")
 name = "超频"
-tooltip = "降低开火0.5间隔"
+tooltip = "降低开火0.06间隔"
 type = 4
 gam_stone_spend = 20
 metadata/_custom_type_script = "uid://cx466qf28qv3n"

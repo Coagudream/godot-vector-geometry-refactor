@@ -118,7 +118,7 @@ alignment = 1
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer2" unique_id=1265034654]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "矢量几何"
+text = "矢量幸存者"
 label_settings = SubResource("LabelSettings_3dowm")
 horizontal_alignment = 1
 vertical_alignment = 1

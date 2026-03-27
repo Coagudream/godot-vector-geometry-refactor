@@ -28,6 +28,10 @@ window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[gui]
+
+theme/custom_font="uid://bhfgmkr3qg37u"
+
 [input]
 
 move_left={
@@ -92,4 +96,5 @@ common/physics_interpolation=true
 
 [rendering]
 
+renderer/rendering_method="mobile"
 environment/defaults/default_clear_color=Color(0, 0, 0, 0.799)
