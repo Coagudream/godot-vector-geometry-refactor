@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwsy221vrao22"
-path="res://.godot/imported/Square.png-94cfa56ba3403e88868c1603dbeb3637.ctex"
+uid="uid://doiow0d2icn8m"
+path="res://.godot/imported/升级.png-03463695d354581c6eaf30ecbaa7f69c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://通用/系统/Buff系统/Buff/具体buff/Square.png"
-dest_files=["res://.godot/imported/Square.png-94cfa56ba3403e88868c1603dbeb3637.ctex"]
+source_file="res://readme_png/升级.png"
+dest_files=["res://.godot/imported/升级.png-03463695d354581c6eaf30ecbaa7f69c.ctex"]
 
 [params]
 
